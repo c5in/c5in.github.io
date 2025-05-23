@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="event-content">
+  <header class="event-header">
+    <h1>{{ page.title }}</h1>
+    <p class="event-meta">
+      <strong>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time><br>
+      {% if page.time %}<strong>Time:</strong> {{ page.time }}<br>{% endif %}
+      {% if page.location %}<strong>Location:</strong> {{ page.location }}<br>{% endif %}
+      {% if page.type %}<strong>Type:</strong> {{ page.type }}{% endif %}
+    </p>
+  </header>
+
+  {{ content }}
+
+  {% if page.registration_link %}
+    <p><a href="{{ page.registration_link }}" class="btn" target="_blank" rel="noopener noreferrer">Register Here</a></p>
+  {% endif %}
+</article>

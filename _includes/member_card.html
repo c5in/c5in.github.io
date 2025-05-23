@@ -1,0 +1,9 @@
+<article class="card member-card">
+  {% if item.image %}
+    <img src="{{ site.baseurl }}{{ site.image_path }}{{ item.image }}" alt="{{ item.name }}" class="card-image">
+  {% endif %}
+  <h3><a href="{{ item.url | relative_url }}">{{ item.name }}</a></h3>
+  {% if item.role %}<p class="card-meta">{{ item.role }}</p>{% endif %}
+  <p>{{ item.excerpt | default: item.content | strip_html | truncatewords: 20 }}</p>
+  <a href="{{ item.url | relative_url }}" class="read-more">View Profile →</a>
+</article>

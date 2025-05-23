@@ -1,0 +1,12 @@
+- name: Nom Prénom 1
+  role: Président(e)
+  image: /assets/images/placeholder-profile.png # Remplacez par le chemin de l'image
+  bio: Courte biographie ou description du rôle.
+- name: Nom Prénom 2
+  role: Secrétaire Général(e)
+  image: /assets/images/placeholder-profile.png
+  bio: Courte biographie.
+- name: Nom Prénom 3
+  role: Trésorier(e)
+  image: /assets/images/placeholder-profile.png
+  bio: Courte biographie.

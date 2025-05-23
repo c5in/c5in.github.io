@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="publication-content">
+  <header class="publication-header">
+    <h1>{{ page.title }}</h1>
+    <p class="publication-meta">
+      {% if page.authors %}<strong>Authors:</strong> {{ page.authors | join: ", " }}<br>{% endif %}
+      <strong>Published:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time><br>
+      {% if page.type %}<strong>Type:</strong> {{ page.type }}{% endif %}
+    </p>
+  </header>
+
+  {{ content }} <!-- Abstract or summary -->
+
+  {% if page.link %}
+    <p><a href="{{ page.link }}" class="btn" target="_blank" rel="noopener noreferrer">Read Full Publication</a></p>
+  {% elsif page.file %}
+    <p><a href="{{ site.baseurl }}/assets/files/{{ page.file }}" class="btn" target="_blank" rel="noopener noreferrer">Download PDF</a></p>
+  {% endif %}
+</article>

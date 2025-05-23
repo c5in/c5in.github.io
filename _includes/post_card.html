@@ -1,0 +1,10 @@
+<article class="card post-card">
+  <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+  <p class="card-meta"><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%B %d, %Y" }}</time></p>
+  {% if item.excerpt %}
+    <p>{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
+  {% else %}
+    <p>{{ item.content | strip_html | truncatewords: 30 }}</p>
+  {% endif %}
+  <a href="{{ item.url | relative_url }}" class="read-more">Read More →</a>
+</article>

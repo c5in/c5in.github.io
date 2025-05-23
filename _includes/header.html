@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="container header-content">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-nav">
+      <ul>
+        {% for item in site.data.navigation %}
+          <li><a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu">☰</button>
+  </div>
+</header>
+
+<script>
+  // Basic mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('active');
+    });
+  }
+</script>

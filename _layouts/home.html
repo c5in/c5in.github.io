@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{% include hero.html %}
+
+<section class="home-section">
+  <h2>Welcome to C5IN</h2>
+  <p>{{ site.description }}</p>
+  <p><a href="{{ '/pages/about/' | relative_url }}" class="btn">Learn More About Us</a></p>
+</section>
+
+<section class="home-section">
+  <h2>Latest News</h2>
+  <div class="post-list">
+    {% for post in site.posts limit:3 %}
+      {% include post_card.html item=post %}
+    {% endfor %}
+  </div>
+  <p><a href="{{ '/pages/blog/' | relative_url }}" class="btn">View All News</a></p>
+</section>
+
+<section class="home-section">
+  <h2>Upcoming Events</h2>
+  <div class="event-list">
+    {% assign upcoming_events = site.events | where_exp: "item", "item.date >= site.time" | sort: "date" %}
+    {% for event in upcoming_events limit:3 %}
+      {% include event_card.html item=event %}
+    {% else %}
+      <p>No upcoming events scheduled. Check back soon!</p>
+    {% endfor %}
+  </div>
+  <p><a href="{{ '/pages/events/' | relative_url }}" class="btn">View All Events</a></p>
+</section>
+
+<section class="home-section">
+  <h2>Our Mission</h2>
+  <p>To be a catalyst for technological innovation in Cameroon by promoting the understanding and adoption of cloud computing, distributed systems, IoT Edge, and Fog computing. We strive to empower individuals and organizations through education, community building, and practical application of these transformative technologies.</p>
+</section>

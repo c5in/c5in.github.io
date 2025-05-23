@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="container">
+    <p>© {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    <p>
+      {% if site.social.twitter %}<a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer">Twitter</a> | {% endif %}
+      {% if site.social.github %}<a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener noreferrer">GitHub</a> | {% endif %}
+      {% if site.social.linkedin %}<a href="https://linkedin.com/company/{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>{% endif %}
+    </p>
+    <p>Fostering Tech Innovation in Cameroon.</p>
+  </div>
+</footer>

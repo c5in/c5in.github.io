@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="collection-listing-page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+  </header>
+
+  <div class="items-grid">
+    {% assign collection_items = site[page.collection_name] | sort: "date" | reverse %}
+    {% if page.collection_name == "events" %}
+      {% assign collection_items = site[page.collection_name] | sort: "date" %}
+    {% endif %}
+    
+    {% for item in collection_items %}
+      {% if page.collection_name == "posts" %}
+        {% include post_card.html item=item %}
+      {% elsif page.collection_name == "events" %}
+        {% include event_card.html item=item %}
+      {% elsif page.collection_name == "members" %}
+        {% include member_card.html item=item %}
+      {% elsif page.collection_name == "publications" %}
+        {% include publication_card.html item=item %}
+      {% endif %}
+    {% else %}
+      <p>No items found in this collection yet.</p>
+    {% endfor %}
+  </div>
+</div>

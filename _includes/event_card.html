@@ -1,0 +1,9 @@
+<article class="card event-card">
+  <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+  <p class="card-meta">
+    <strong>Date:</strong> <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%B %d, %Y" }}</time><br>
+    {% if item.location %}<strong>Location:</strong> {{ item.location }}{% endif %}
+  </p>
+  <p>{{ item.excerpt | default: item.content | strip_html | truncatewords: 25 }}</p>
+  <a href="{{ item.url | relative_url }}" class="read-more">View Details →</a>
+</article>

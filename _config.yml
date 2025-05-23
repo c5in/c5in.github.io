@@ -1,0 +1,81 @@
+title: C5IN - Cameroon Cloud & Computing Innovation Network
+email: contact@c5in.org # Change this
+description: >- # this means to ignore newlines until "baseurl:"
+  Fostering innovation in Cloud Computing, Distributed Systems, IoT Edge, and Fog technologies in Cameroon.
+  We aim to build a vibrant tech community through education, events, collaboration, and resource sharing.
+baseurl: "" # the subpath of your site, e.g. /blog. If hosted at https://username.github.io/reponame, set to /reponame
+url: "https://c5in.github.io" # your site's domain, e.g., https://yourusername.github.io. Change this!
+github_username: c5in # Change this
+#linkedin_username: yourlinkedin # Optional
+
+# Build settings
+markdown: kramdown
+theme: null # We are building custom, but you could use a theme like minima or a remote_theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag # Uncomment if you add the gem
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+  events:
+    output: true
+    permalink: /events/:year/:month/:day/:title/
+  members:
+    output: true
+    permalink: /members/:title/ # title will be the filename without extension
+  publications:
+    output: true
+    permalink: /publications/:year/:month/:day/:title/
+
+# Defaults for collections
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "C5IN Team" # Default author for posts
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+      type: "members"
+    values:
+      layout: "member"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+  - scope:
+      path: "" # all files
+    values:
+      image_path: "/assets/images/" # Default path for images
+
+# Site Navigation - used in _includes/header.html
+# See _data/navigation.yml
+
+# Social Media Links (optional, use in footer or header)
+social:
+  twitter: "YourTwitterHandle"
+  github: "YourGitHubOrg"
+  linkedin: "YourLinkedInPage"
+  # facebook: "YourFacebookPage"
