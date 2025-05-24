@@ -486,6 +486,10 @@ img {
   --ztc-text-text-18: #0D0400;
   --ztc-text-text-19: #44403E;
   --ztc-text-text-20: #4AF8BA;
+  --global-text-color:#000;
+  --global-hover-color:#b509ac;
+  --global-theme-color:#b509ac;
+  --global-code-bg-color:rgba(181,9,172,0.05);
   --ztc-bg-bg-1: #fff;
   --ztc-bg-bg-2: #1A1719;
   --ztc-bg-bg-3: #FFBA00;
@@ -637,6 +641,56 @@ Location:
 /*============= OTHERS CSS AREA ===============*/
 /*============= FOOTER CSS AREA ===============*/
 /*============= COMMON CSS AREA ===============*/
+
+pre {
+	color: var(--global-theme-color);
+	background-color: var(--global-code-bg-color);
+	border-radius: 6px;
+	padding: 6px 12px
+}
+
+pre pre,
+pre code {
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 0;
+	margin-bottom: 0;
+	padding: 0
+}
+
+code {
+	color: var(--global-theme-color);
+	background-color: var(--global-code-bg-color);
+	border-radius: 3px;
+	padding: 3px 3px
+}
+
+.code-display-wrapper {
+	position: relative
+}
+
+.code-display-wrapper .copy {
+	background: var(--ztc-bg-bg-1);
+	border-color: var(--ztc-bg-bg-1);
+	border-radius: .3rem;
+	border-style: none;
+	color: var(--global-text-color);
+	font-size: medium;
+	opacity: 0;
+	position: absolute;
+	right: .2rem;
+	top: .2rem
+}
+
+.code-display-wrapper:active .copy,
+.code-display-wrapper:focus .copy,
+.code-display-wrapper:hover .copy {
+	color: var(--global-hover-color);
+	opacity: 1
+}
+
+
+
+
 .heading1 h5 {
   color: var(--ztc-text-text-1);
   font-family: var(--ztc-family-font1);

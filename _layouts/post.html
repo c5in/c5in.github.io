@@ -40,7 +40,7 @@ layout: default
 							</ul>
 							<div class="space18"></div>
 							<h2>{{ page.title }}</h2>
-							<div class="space16"></div>
+							<div class="space16" id="markdown-content"></div>
 
               {{ content }}
 							<div class="space48"></div>
@@ -53,7 +53,7 @@ layout: default
                     <h4>Tags:</h4>
                     <ul>
                       {% for tag in page.tags %}
-                      <li><a href="#">#{{ tag }}</a></li>
+                      <li><a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">#{{ tag }}</a></li>
                       {% endfor %}
                     </ul>
                   </div>
@@ -96,7 +96,7 @@ layout: default
                   <ul>
                     {% for category in page.categories %}
                     <li>
-                      <a href="#"
+                      <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}"
                         >{{ category }} <span><i class="fa-solid fa-angle-right"></i></span
                       ></a>
                     </li>
