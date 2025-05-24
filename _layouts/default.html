@@ -10,6 +10,12 @@
  
   {% include footer.html %}
   <!-- Add JS scripts here if needed -->
-   {% include scripts.html %}
+  {% include scripts.html %}
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        AOS.init();
+        console.log("AOS initialized");
+      });
+  </script>
 </body>
 </html>

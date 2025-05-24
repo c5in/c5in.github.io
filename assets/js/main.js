@@ -71,7 +71,7 @@ $(".tx-search-close").on("click", function (e) {
     });
     }
 //========== VIDEO POPUP ENDS ============= //
-AOS.init;
+
 AOS.init({disable: 'mobile'});
 
 //========== NICE SELECT ============= //
