@@ -8,11 +8,11 @@
   link: /events/
 - name: Members
   link: /members/ # Link to the listing page
-- name: Publications
-  link: /publications/ # Link to the listing page
-- name: Resources
-  link: /resources/
-- name: Join Us
-  link: /join/
+# - name: Publications
+#   link: /publications/ # Link to the listing page
+# - name: Resources
+#   link: /resources/
+# - name: Join Us
+#   link: /join/
 - name: Contact
   link: /contact/

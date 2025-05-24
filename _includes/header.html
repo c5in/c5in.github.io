@@ -1,24 +1,67 @@
-<header class="site-header">
-  <div class="container header-content">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="site-nav">
-      <ul>
-        {% for item in site.data.navigation %}
-          <li><a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+<!--=====HEADER START=======-->
+<header>
+  <div class="header-area homepage1 header header-sticky d-none d-lg-block" id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-elements">
+            <div class="site-logo">
+              <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo/logo1.png' | relative_url }}" alt="" /></a>
+            </div>
+            <div class="main-menu">
+
+              <ul>
+                {% for item in site.data.navigation %}
+                  <li><a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a></li>
+                {% endfor %}
+              </ul>
+              <!-- <ul>
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Event</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="event.html">Our Event</a></li>
+                <li><a href="blog.html">Our Blog</a></li>
+                <li><a href="memories.html">Our Memories</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+              </ul> -->
+              
+            </div>
+            <div class="btn-area">
+              <div class="search-icon header__search header-search-btn">
+                <a href="#"><img src="{{ '/assets/img/icons/search1.svg' | relative_url }}" alt="" /></a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="#" class="m-0"><i class="fa-brands fa-pinterest-p"></i></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header-search-form-wrapper">
+              <div class="tx-search-close tx-close"><i class="fa-solid fa-xmark"></i></div>
+              <div class="header-search-container">
+                <form role="search" class="search-form">
+                  <input type="search" class="search-field" placeholder="Search …" value="" name="s" />
+                  <button type="submit" class="search-submit"><img src="{{ '/assets/img/icons/search1.svg' | relative_url }}" alt="" /></button>
+                </form>
+              </div>
+            </div>
+            <div class="body-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
-
-<script>
-  // Basic mobile menu toggle
-  const menuToggle = document.getElementById('menu-toggle');
-  const siteNav = document.querySelector('.site-nav');
-  if (menuToggle && siteNav) {
-    menuToggle.addEventListener('click', () => {
-      siteNav.classList.toggle('active');
-    });
-  }
-</script>
+<!--=====HEADER END =======-->

@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem "jekyll" # Ou la version supportée par GitHub Pages
+gem 'jekyll', '~> 4.3.4' # Ou la version supportée par GitHub Pages
 
 group :jekyll_plugins do
     gem "jekyll-seo-tag" # Pour un meilleur SEO
