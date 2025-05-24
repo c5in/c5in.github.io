@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 gem "jekyll" # Ou la version supportée par GitHub Pages
 
-group: :jekyll_plugins do
+group :jekyll_plugins do
     gem "jekyll-seo-tag" # Pour un meilleur SEO
     gem "jekyll-sitemap" # Pour générer un sitemap
     gem "jekyll-feed" # Pour le flux RSS
