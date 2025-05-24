@@ -1,23 +1,151 @@
 ---
 layout: default
 ---
-<article class="post-content">
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-      {% if page.author %} • {{ page.author }}{% endif %}
-    </p>
-  </header>
 
-  {{ content }}
-
-  {% if page.tags.size > 0 %}
-  <div class="post-tags">
-    <strong>Tags:</strong>
-    {% for tag in page.tags %}
-      <span class="tag">{{ tag }}</span>
-    {% endfor %}
+<!--===== HERO AREA STARTS =======-->
+<div class="inner-page-header" style="background-image: url({{ '/assets/img/bg/header-bg14.png' | relative_url }});">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 m-auto">
+        <div class="heading1 text-center">
+          <h1>Blog Details</h1>
+          <div class="space20"></div>
+          <a href="{{ '/' | relative_url}}">Home <i class="fa-solid fa-angle-right"></i> <span>Blog Details</span></a>
+        </div>
+      </div>
+    </div>
   </div>
-  {% endif %}
-</article>
+</div>
+<!--===== HERO AREA ENDS =======-->
+
+
+<!--===== BLOG AREA STARTS =======-->
+		<div class="blog-details-section sp8">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="blog-deatils-content heading2">
+							<div class="img1">
+								<img src="{{ page.image | prepend: '/assets/img/all-images/blog/'}}" alt="" />
+							</div>
+							<div class="space32"></div>
+							<ul>
+								<li>
+									<a href="#"><img src="{{ '/assets/img/icons/calender1.svg' | relative_url }}" alt="{{ page.title }}" /><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time><span> | </span></a>
+								</li>
+								<li>
+									<a href="#"><img src="{{ '/assets/img/icons/user1.svg' | relative_url}}" alt="" />{% if page.author %} • {{ page.author }}  {% endif %} <span> | </span></a>
+								</li>
+								
+							</ul>
+							<div class="space18"></div>
+							<h2>{{ page.title }}</h2>
+							<div class="space16"></div>
+
+              {{ content }}
+							<div class="space48"></div>
+							
+							
+							<div class="tags-social-area">
+
+                {% if page.tags.size > 0 %}
+                  <div class="tags">
+                    <h4>Tags:</h4>
+                    <ul>
+                      {% for tag in page.tags %}
+                      <li><a href="#">#{{ tag }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+								<div class="social">
+									<h4>Social:</h4>
+									<ul>
+										<li>
+											<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa-brands fa-instagram"></i></a>
+										</li>
+										<li>
+											<a href="#" class="m-0"><i class="fa-brands fa-youtube"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="space30 d-lg-none d-block"></div>
+						<div class="blog-auhtor-details">
+							<div class="search-area">
+								<h3>Search</h3>
+								<div class="space24"></div>
+								<form>
+									<input type="text" placeholder="Search..." />
+									<button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+								</form>
+							</div>
+							<div class="space32"></div>
+
+              {% if page.categories.size > 0 %}
+                <div class="blog-categories">
+                  <h3>Blog Category</h3>
+                  <div class="space12"></div>
+                  <ul>
+                    {% for category in page.categories %}
+                    <li>
+                      <a href="#"
+                        >{{ category }} <span><i class="fa-solid fa-angle-right"></i></span
+                      ></a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+							<div class="space32"></div>
+							<div class="tags-area">
+								<h3>Popular Hastag</h3>
+								<div class="space12"></div>
+								<ul>
+									<li><a href="#">#Conferences</a></li>
+									<li><a href="#">#Meetup</a></li>
+									<li><a href="#">#Event</a></li>
+								</ul>
+
+								<ul>
+									<li><a href="#">#Eventify2024</a></li>
+									<li><a href="#">#DigitalTransformation</a></li>
+								</ul>
+
+								<ul>
+									<li><a href="#">#BusinessLeadership</a></li>
+									<li><a href="#">#IndustryTrends</a></li>
+								</ul>
+							</div>
+							<div class="space32"></div>
+							<!-- <div class="author-images-area">
+								<h3>Popular Author</h3>
+								<div class="space12"></div>
+								<ul>
+									<li><img src="assets/img/all-images/blog/blog-img11.png" alt="" /></li>
+									<li><img src="assets/img/all-images/blog/blog-img12.png" alt="" /></li>
+									<li><img src="assets/img/all-images/blog/blog-img13.png" alt="" /></li>
+									<li><img src="assets/img/all-images/blog/blog-img14.png" alt="" /></li>
+								</ul>
+								<ul>
+									<li><img src="assets/img/all-images/blog/blog-img15.png" alt="" /></li>
+									<li><img src="assets/img/all-images/blog/blog-img16.png" alt="" /></li>
+									<li><img src="assets/img/all-images/blog/blog-img17.png" alt="" /></li>
+									<li><img src="assets/img/all-images/blog/blog-img18.png" alt="" /></li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--===== BLOG AREA ENDS =======-->
+
+

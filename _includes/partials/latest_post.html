@@ -1,0 +1,37 @@
+{% if page.latest_posts != blank %}
+    {% assign latest_posts_size = site.posts | size %}
+    {% assign latest_posts = site.posts | sort: 'date' | reverse %}
+    {% if page.latest_posts.limit %}
+        {% assign latest_posts_limit = page.latest_posts.limit %}
+    {% else %}
+        {% assign latest_posts_limit = latest_posts_size %}
+    {% endif %}
+    {% for item in latest_posts limit: latest_posts_limit %}
+
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800">
+            <div class="blog1-auhtor-boxarea">
+                <div class="img1 image-anime">
+                    <img src="{{ item.image | prepend: '/assets/img/all-images/blog/' }}" alt="{{ item.title }}" />
+                </div>
+
+                <div class="content-area">
+                    <ul>
+                        <li>
+                            <a href="{{ item.url | relative_url }}"><img src="{{ '/assets/img/icons/calender1.svg' | relative_url }}" alt="" /><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%B %d, %Y" }}</time></a>
+                        </li>
+                    </ul>
+                    <div class="space20"></div>
+                    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    <div class="space24"></div>
+                    <div class="btn-area1">
+                        <a href="{{ item.url | relative_url }}" class="vl-btn2">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="col-lg-12">
+        <p>No latest posts available.</p>
+    </div>
+{% endif %}

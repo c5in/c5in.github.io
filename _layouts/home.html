@@ -5,6 +5,27 @@ layout: default
 
 {% include partials/about-section.html %}
 
+{% if page.latest_posts and page.latest_posts.enabled %}
+		<!--===== BLOG AREA STARTS =======-->
+		<div class="blog1-section-area sp2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 m-auto">
+						<div class="blog-header text-center heading2 space-margin60">
+							<h5 data-aos="fade-left" data-aos-duration="900">News & updates</h5>
+							<div class="space16"></div>
+							<h2 class="text-anime-style-3">Balancing Profit & Purpose</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					{% include partials/latest_post.html %}
+				</div>
+			</div>
+		</div>
+		<!--===== BLOG AREA ENDS =======-->
+{% endif %}
+
 <!-- <section class="home-section">
   <h2>Welcome to C5IN</h2>
   <p>{{ site.description }}</p>

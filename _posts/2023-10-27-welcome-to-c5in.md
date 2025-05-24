@@ -2,6 +2,7 @@
 title: "Welcome to C5IN: Cameroon's Hub for Cloud & Distributed Systems Innovation!"
 date: 2023-10-27 10:00:00 +0100
 categories: [announcements, community]
+image: blog-img1.png
 tags: [welcome, cloud computing, cameroon, innovation]
 excerpt: "We are thrilled to launch C5IN, a new initiative dedicated to fostering growth and expertise in cloud computing, distributed systems, IoT Edge, and Fog technologies across Cameroon."
 ---

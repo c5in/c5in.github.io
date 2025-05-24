@@ -3,6 +3,7 @@ title: "The State of Cloud Adoption in Cameroon: Challenges & Opportunities"
 date: 2025-01-10 
 authors: ["Dr. Jane Smith", "John Doe"]
 type: "White Paper" # White Paper, Case Study, Article, Report
+image: blog-img1.png
 excerpt: "An in-depth analysis of the current cloud computing landscape in Cameroon, identifying key drivers, barriers to adoption, and strategic recommendations for growth."
 # link: "https://link.to.external.pdf" # If hosted elsewhere
 file: "cloud-adoption-cameroon-c5in.pdf" # Optional: put in assets/files/ (create this folder)
