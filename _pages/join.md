@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Join C5IN
+permalink: /join/
 ---
 
 Become a part of Cameroon's leading community for cloud computing, distributed systems, IoT, and Fog technologies! By joining C5IN, you connect with a vibrant network of professionals, students, researchers, and organizations passionate about shaping the future of tech in Cameroon.

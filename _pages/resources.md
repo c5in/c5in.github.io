@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Resources
+permalink: /resources/
 ---
 
 Welcome to the C5IN Resource Hub! Here you'll find a curated collection of materials to help you learn, innovate, and stay updated in the world of cloud computing, distributed systems, IoT Edge, and Fog technologies.

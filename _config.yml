@@ -16,7 +16,7 @@ plugins:
   - jekyll-seo-tag # Uncomment if you add the gem
 
 # Exclude from processing.
-include: ["pages"]
+include: ["_pages"]
 exclude:
   - Gemfile
   - Gemfile.lock

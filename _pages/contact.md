@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contact Us
+permalink: /contact/
 ---
 
 We'd love to hear from you! Whether you have questions, want to collaborate, or simply learn more about C5IN, please get in touch.

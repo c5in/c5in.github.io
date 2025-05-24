@@ -1,18 +1,18 @@
 - name: Home
   link: /
 - name: About Us
-  link: /pages/about/
+  link: /about/
 - name: Blog
-  link: /pages/blog/
+  link: /blog/
 - name: Events
-  link: /pages/events/
+  link: /events/
 - name: Members
-  link: /pages/members/ # Link to the listing page
+  link: /members/ # Link to the listing page
 - name: Publications
-  link: /pages/publications/ # Link to the listing page
+  link: /publications/ # Link to the listing page
 - name: Resources
-  link: /pages/resources/
+  link: /resources/
 - name: Join Us
-  link: /pages/join/
+  link: /join/
 - name: Contact
-  link: /pages/contact/
+  link: /contact/

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About C5IN
+permalink: /about/
 ---
 
 ## Our Mission
