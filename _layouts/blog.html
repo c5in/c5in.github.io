@@ -57,26 +57,9 @@ layout: default
 
 
             <div class="space30"></div>
-            <div class="pagination-area">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <i class="fa-solid fa-angle-left"></i>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="#">12</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            {% if page.pagination.enabled %}
+                {% include pagination.html %}
+            {% endif %}
         </div>
     </div>
 

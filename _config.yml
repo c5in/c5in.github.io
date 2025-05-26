@@ -8,8 +8,33 @@ url: "https://c5in.github.io" # your site's domain, e.g., https://yourusername.g
 github_username: c5in # Change this
 #linkedin_username: yourlinkedin # Optional
 
+
+pagination:
+  enabled: true
+
+related_blog_posts:
+  enabled: true
+  max_related: 5
+
+sponsors:
+  enabled: true
+testimonials:
+  enabled: true
+  limit: 6
+
 # Build settings
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
 theme: null # We are building custom, but you could use a theme like minima or a remote_theme
 plugins:
   - jekyll-feed
@@ -73,6 +98,8 @@ defaults:
 
 # Site Navigation - used in _includes/header.html
 # See _data/navigation.yml
+
+
 
 # Social Media Links (optional, use in footer or header)
 social:
