@@ -1,12 +1,33 @@
 ---
 layout: event
 title: "C5IN Kickoff Workshop: Introduction to Cloud Computing"
-date: 2024-01-15 
+date: 2025-01-15 
 time: "2:00 PM - 5:00 PM (WAT)"
 location: "Tech Hub XYZ, Douala (Online option available)" # Be specific
 type: "Workshop" # Workshop, Conference, Meetup, Hackathon, Webinar
 excerpt: "Join us for our inaugural workshop! A beginner-friendly introduction to the core concepts of cloud computing, its benefits, and key players."
 registration_link: "https://link.to.your.registration.form" # Optional
+
+schedule:
+  - day_name: "Workshop Day" # Nom du jour pour l'en-tête de la colonne
+    sessions:
+      - time_slot: "2:00 PM - 2:15 PM"
+        title: "Welcome & C5IN Introduction"
+        speaker: "C5IN Team"
+      - time_slot: "2:15 PM - 3:30 PM"
+        title: "Cloud Computing Fundamentals"
+        speaker: "Dr. Ada Lovelace"
+        description: "Covering IaaS, PaaS, SaaS, and core benefits." # Optionnel
+      - time_slot: "3:30 PM - 3:45 PM"
+        title: "Break"
+        speaker: "" # Pas de speaker pour une pause
+      - time_slot: "3:45 PM - 4:30 PM"
+        title: "Cloud Use Cases & Getting Started"
+        speaker: "Mr. Charles Babbage"
+        description: "Practical examples relevant to the Cameroonian context." # Optionnel
+      - time_slot: "4:30 PM - 5:00 PM"
+        title: "Q&A and Networking"
+        speaker: "All Participants & Speakers"
 ---
 
 C5IN is excited to announce its first official event: an **Introduction to Cloud Computing Workshop**!

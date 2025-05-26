@@ -1,0 +1,172 @@
+<!--===== EVENT AREA STARTS =======-->
+<div class="event1-section-area sp1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 m-auto">
+                <div class="event-header heading2 space-margin60 text-center">
+                    <h5 data-aos="fade-left" data-aos-duration="800">Event Schedule</h5>
+                    <div class="space16"></div>
+                    <h2 class="text-anime-style-3">Our Events Schedule Plan</h2>
+                </div>
+            </div>
+        </div>
+
+        
+        {% assign today_raw = 'now' | date: '%s' %}
+        {% assign today_year_month = 'now' | date: '%Y-%m' %}
+
+        
+        {% assign upcoming_events_all = "" | split: "" %}
+        {% for event_item in site.events %}
+            {% assign event_date_raw = event_item.date | date: '%s' %}
+            {% if event_date_raw >= today_raw %}
+                {% assign upcoming_events_all = upcoming_events_all | push: event_item %}
+            {% endif %}
+        {% endfor %}
+        {% assign sorted_upcoming_events = upcoming_events_all | sort: "date" %}
+
+
+        
+        {% assign months_data = "" | split: "" %}
+        {% assign current_year_num = 'now' | date: '%Y' | plus: 0 %}
+        {% assign current_month_num = 'now' | date: '%-m' | plus: 0 %}
+
+        {% for i in (0..4) %}
+            {% assign target_month_abs = current_month_num | plus: i %}
+            {% assign year_offset = 0 %}
+            {% if target_month_abs > 12 %}
+                {% assign year_offset = target_month_abs | minus: 1 | divided_by: 12 %}
+                {% assign target_month_num = target_month_abs | modulo: 12 %}
+                {% if target_month_num == 0 %} {% assign target_month_num = 12 %} {% endif %}
+            {% else %}
+                {% assign target_month_num = target_month_abs %}
+            {% endif %}
+            {% assign target_year = current_year_num | plus: year_offset %}
+
+            {% assign temp_date_str_for_format = target_year | append: '-' | append: target_month_num | append: '-01' %}
+            {% assign month_name_abbr = temp_date_str_for_format | date: '%b' | upcase %}
+            {% assign month_display_name = temp_date_str_for_format | date: '%B' %} 
+            
+            {% assign month_year_for_filtering = target_year | append: '-' %}
+            {% if target_month_num < 10 %}
+                {% assign month_year_for_filtering = month_year_for_filtering | append: '0' | append: target_month_num %}
+            {% else %}
+                {% assign month_year_for_filtering = month_year_for_filtering | append: target_month_num %}
+            {% endif %}
+            
+            {% assign month_has_events = false %}
+            {% for event_item in sorted_upcoming_events %}
+                {% assign event_year_month = event_item.date | date: '%Y-%m' %}
+                {% if event_year_month == month_year_for_filtering %}
+                    {% assign month_has_events = true %}
+                    {% break %}
+                {% endif %}
+            {% endfor %}
+
+            {% if month_has_events %}
+                {% assign month_info = "" | split: "" %}
+                {% assign month_info = month_info | push: month_name_abbr %}
+                {% assign month_info = month_info | push: target_year %}
+                {% assign month_info = month_info | push: month_year_for_filtering %}
+                {% assign month_info = month_info | push: month_display_name %}
+                {% assign months_data = months_data | push: month_info %}
+            {% endif %}
+        {% endfor %}
+
+
+        {% if months_data.size > 0 %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <div data-aos="fade-up" data-aos-duration="900">
+                        <ul class="nav nav-pills space-margin60" id="pills-tab" role="tablist">
+                            {% for month_info in months_data %}
+                                {% assign loop_idx = forloop.index0 %}
+                                {% assign tab_id_base = "pills-month-" | append: loop_idx %}
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link {% if loop_idx == 0 %}active{% endif %}" id="{{ tab_id_base }}-tab" data-bs-toggle="pill" data-bs-target="#{{ tab_id_base }}" type="button" role="tab" aria-controls="{{ tab_id_base }}" aria-selected="{% if loop_idx == 0 %}true{% else %}false{% endif %}">
+                                        <span class="day">Mois {{ loop_idx | plus: 1 }}</span>
+                                        <span class="vl-flex">
+                                            <span class="cal">{{ month_info[0] }}</span> <!-- JAN, FEB, etc. -->
+                                            <span class="date">{{ month_info[1] }}</span> <!-- YYYY -->
+                                        </span>
+                                    </button>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="pills-tabContent">
+                        {% for month_info in months_data %}
+                            {% assign loop_idx = forloop.index0 %}
+                            {% assign tab_id_base = "pills-month-" | append: loop_idx %}
+                            {% assign current_filter_month_year = month_info[2] %} <!-- YYYY-MM -->
+
+                            <div class="tab-pane fade {% if loop_idx == 0 %}show active{% endif %}" id="{{ tab_id_base }}" role="tabpanel" aria-labelledby="{{ tab_id_base }}-tab" tabindex="0">
+                                {% assign events_in_this_month_count = 0 %}
+                                {% for event_item in sorted_upcoming_events %}
+                                    {% assign event_year_month = event_item.date | date: '%Y-%m' %}
+                                    {% if event_year_month == current_filter_month_year %}
+                                        {% assign events_in_this_month_count = events_in_this_month_count | plus: 1 %}
+                                        {% assign aos_duration = 600 | plus: forloop.index | times: 100 %}
+                                        {% if aos_duration > 1200 %} {% assign aos_duration = 1200 %} {% endif %}
+                                        
+                                        <div class="tabs-widget-boxarea" data-aos="fade-up" data-aos-duration="{{ aos_duration }}">
+                                            <div class="row align-items-center">
+                                                <div class="col-lg-4">
+                                                    <div class="img1">
+                                                        {% assign image_path = event_item.image  %}
+                                                        {% if image_path == "" or image_path == nil %}
+                                                            {% assign image_path = site.events_defaults.image %}
+                                                        {% endif %}
+                                                        <img src="{{  image_path | prepend: '/assets/img/all-images/event/' }}" alt="{{ event_item.title | escape }}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <div class="content-area">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{{ event_item.url | relative_url }}"><img src="{{ '/assets/img/icons/clock1.svg' | relative_url }}" alt="" /> {{ event_item.time }} <span> | </span></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{{ event_item.url | relative_url }}"><img src="{{ '/assets/img/icons/location1.svg' | relative_url }}" alt="" /> {{ event_item.location | escape }} </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="space16"></div>
+                                                        <p class="text-info"><em>Date: {{ event_item.date | date: "%d %B %Y" }}</em></p>
+                                                        <div class="space20"></div>
+                                                        <a href="{{ event_item.url | relative_url }}" class="head">{{ event_item.title | escape }}</a>
+                                                        <div class="space16"></div>
+                                                        <p>{{ event_item.excerpt | strip_html | truncatewords: 40 }}</p>
+                                                        <div class="space32"></div>
+                                                        <div class="btn-area1">
+                                                            <a href="{{ event_item.ticket_link | relative_url }}" class="vl-btn1">Acheter un billet</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% unless forloop.last %}
+                                        <div class="space30"></div>
+                                        {% endunless %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if events_in_this_month_count == 0 %}
+                                    <div class="text-center py-5">
+                                        <p>No events planned for {{ month_info[3] }} {{ month_info[1] }}.</p>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% else %}
+             <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>No upcoming events planned for the next 5 months.</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+<!--===== EVENT AREA ENDS =======-->

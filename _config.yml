@@ -8,6 +8,8 @@ url: "https://c5in.github.io" # your site's domain, e.g., https://yourusername.g
 github_username: c5in # Change this
 #linkedin_username: yourlinkedin # Optional
 
+future: true
+
 
 pagination:
   enabled: true
@@ -21,6 +23,11 @@ sponsors:
 testimonials:
   enabled: true
   limit: 6
+
+# Events
+events_defaults:
+  enabled: true
+  image: "event-img1.png" 
 
 # Build settings
 markdown: kramdown
@@ -38,6 +45,7 @@ kramdown:
 theme: null # We are building custom, but you could use a theme like minima or a remote_theme
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
   - jekyll-seo-tag # Uncomment if you add the gem
 
 # Exclude from processing.
@@ -52,6 +60,9 @@ exclude:
   - vendor/ruby/
   - README.md
   - LICENSE
+  - CONTRIBUTING.md
+  - requirements.txt
+
 
 # Collections
 collections:

@@ -1,20 +1,83 @@
 ---
 layout: default
 ---
-<article class="event-content">
-  <header class="event-header">
-    <h1>{{ page.title }}</h1>
-    <p class="event-meta">
-      <strong>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time><br>
-      {% if page.time %}<strong>Time:</strong> {{ page.time }}<br>{% endif %}
-      {% if page.location %}<strong>Location:</strong> {{ page.location }}<br>{% endif %}
-      {% if page.type %}<strong>Type:</strong> {{ page.type }}{% endif %}
-    </p>
-  </header>
 
-  {{ content }}
+<!--===== HERO AREA STARTS =======-->
+<div class="inner-page-header" style="background-image: url(/assets/img/bg/header-bg10.png)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 m-auto">
+        <div class="heading1 text-center">
+          <h1>Event Schedule</h1>
+          <div class="space20"></div>
+          <a href="{{ '/' | relative_url }}">Home <i class="fa-solid fa-angle-right"></i> <span>Event Schedule</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== HERO AREA ENDS =======-->
 
-  {% if page.registration_link %}
-    <p><a href="{{ page.registration_link }}" class="btn" target="_blank" rel="noopener noreferrer">Register Here</a></p>
-  {% endif %}
-</article>
+{% include partials/event_details.html %}
+
+<!--===== SCHEDULE AREA STARTS =======-->
+    {% if page.schedule and page.schedule.size > 0 %}
+    <div class="schedule-section-area sp10">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 m-auto"> 
+                    <div class="section-header text-center mb-5">
+                        <h2>Event Schedule</h2>
+                    </div>
+                    <div class="schedule">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    {% for day_data in page.schedule %}
+                                        <th>{{ day_data.day_name }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+
+                                {% assign all_time_slots = "" | split: "" %}
+                                {% for day_data in page.schedule %}
+                                    {% for session in day_data.sessions %}
+                                        {% assign all_time_slots = all_time_slots | push: session.time_slot %}
+                                    {% endfor %}
+                                {% endfor %}
+                                {% assign unique_time_slots = all_time_slots | uniq | sort %}
+
+                                {% for slot in unique_time_slots %}
+                                <tr>
+                                    <td>{{ slot }}</td>
+                                    {% for day_data in page.schedule %}
+                                        {% assign session_found_for_slot_and_day = false %}
+                                        <td>
+                                        {% for session in day_data.sessions %}
+                                            {% if session.time_slot == slot %}
+                                                {{ session.title }}
+                                                {% if session.speaker and session.speaker != "" %}<br /><span>By {{ session.speaker }}</span>{% endif %}
+                                                {% if session.description and session.description != "" %}<br /><small><em>{{ session.description }}</em></small>{% endif %}
+                                                {% assign session_found_for_slot_and_day = true %}
+                                                {% break %}
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% unless session_found_for_slot_and_day %}
+                                              #
+                                        {% endunless %}
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!--===== SCHEDULE AREA ENDS =======-->

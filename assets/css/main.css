@@ -24263,3 +24263,556 @@ code {
 }
 
 /*============= MEMORY CSS AREA ===============*//*# sourceMappingURL=main.css.map */
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+
+/* Style Cyber Lines pour toutes les listes UL à l'intérieur des div.event-side-images */
+.event-side-images ul, .blog-details-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event-side-images ul li, .blog-details-content ul li {
+    position: relative;
+    padding: 1rem 0 1rem 2rem;
+    color: #0f4c75;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Puce lumineuse principale */
+.event-side-images ul li::before, .blog-details-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 2px;
+    background: #00d4ff;
+    box-shadow: 0 0 10px #00d4ff;
+    transition: all 0.3s ease;
+    transform: translateY(-50%);
+}
+
+/* Ligne cybernétique qui s'étend */
+.event-side-images ul li::after, .blog-details-content ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #00d4ff, transparent);
+    transition: width 0.5s ease;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+/* Effets au survol */
+.event-side-images ul li:hover, .blog-details-content ul li:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    transform: translateX(5px);
+}
+
+/* Extension de la ligne au survol */
+.event-side-images ul li:hover::after, .blog-details-content ul li:hover::after {
+    width: 100%;
+}
+
+/* Transformation de la puce en cercle lumineux */
+.event-side-images ul li:hover::before, .blog-details-content ul li:hover::before {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #00d4ff, 0 0 25px rgba(0, 212, 255, 0.5);
+}
+
+/* Gestion des listes imbriquées */
+.event-side-images ul ul, .blog-details-content ul ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.event-side-images ul ul li, .blog-details-content ul ul li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9em;
+    color: #2c5f7a;
+}
+
+.event-side-images ul ul li::before, .blog-details-content ul ul li::before {
+    width: 4px;
+    height: 1px;
+    background: #4dd0e1;
+    box-shadow: 0 0 5px #4dd0e1;
+}
+
+.event-side-images ul ul li:hover::before, .blog-details-content ul ul li:hover::before {
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 0 10px #4dd0e1, 0 0 20px rgba(77, 208, 225, 0.4);
+}
+
+/* Variantes de couleur pour différents niveaux */
+.event-side-images ul ul ul li, .blog-details-content ul ul ul li {
+    color: #37474f;
+}
+
+.event-side-images ul ul ul li::before, .blog-details-content ul ul ul li::before {
+    background: #80deea;
+    box-shadow: 0 0 3px #80deea;
+}
+
+.event-side-images ul ul ul li:hover, .blog-details-content ul ul ul li:hover {
+    color: #4dd0e1;
+}
+
+.event-side-images ul ul ul li:hover::before, .blog-details-content ul ul ul li:hover::before {
+    background: #4dd0e1;
+    box-shadow: 0 0 8px #4dd0e1;
+}
+
+
+
+
+
+/* Styles de base pour les paragraphes dans .event-side-images */
+.event-side-images p {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.5rem;
+    color: #2c5f7a;
+    line-height: 1.6;
+    font-weight: 400;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.03), rgba(0, 212, 255, 0.08));
+    border-radius: 8px;
+    border-left: 3px solid transparent;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Bordure lumineuse gauche */
+.event-side-images p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #00d4ff, #4dd0e1, #80deea);
+    opacity: 0.6;
+    transition: all 0.4s ease;
+}
+
+/* Ligne de scan qui traverse le paragraphe */
+.event-side-images p::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    animation: none;
+    transition: all 0.6s ease;
+}
+
+/* Effets au survol */
+.event-side-images p:hover {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(0, 212, 255, 0.15));
+    color: #0f4c75;
+    transform: translateX(5px);
+    box-shadow: 
+        0 5px 20px rgba(0, 212, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Intensification de la bordure au survol */
+.event-side-images p:hover::before {
+    width: 4px;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+/* Animation de scan au survol */
+.event-side-images p:hover::after {
+    animation: cyberscan 1.5s ease-in-out;
+}
+
+@keyframes cyberscan {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* Style pour le premier paragraphe (souvent titre ou introduction) */
+.event-side-images p:first-child {
+    font-size: 1.1em;
+    font-weight: 500;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(77, 208, 225, 0.15));
+    border-left-width: 4px;
+}
+
+.event-side-images p:first-child::before {
+    width: 4px;
+    background: linear-gradient(180deg, #00d4ff, #00bcd4);
+}
+
+/* Style pour les paragraphes avec emphase (contenant des mots-clés) */
+.event-side-images p:has(strong),
+.event-side-images p:has(em),
+.event-side-images p:has(b) {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(128, 222, 234, 0.1));
+    border-left-width: 4px;
+}
+
+/* Effet de focus pour les paragraphes contenant des liens */
+.event-side-images p:has(a) {
+    border-right: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 8px 12px 12px 8px;
+}
+
+.event-side-images p:has(a):hover {
+    border-right-color: #00d4ff;
+    box-shadow: 
+        0 5px 20px rgba(0, 212, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        2px 0 10px rgba(0, 212, 255, 0.3);
+}
+
+/* Style pour les paragraphes de citation ou d'importance */
+.event-side-images p[data-importance="high"],
+.event-side-images p.highlight {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 188, 212, 0.2));
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-left: 4px solid #00d4ff;
+    position: relative;
+}
+
+.event-side-images p[data-importance="high"]::before,
+.event-side-images p.highlight::before {
+    background: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+}
+
+/* Effet de pulsation pour les paragraphes importants */
+.event-side-images p[data-importance="high"]:hover,
+.event-side-images p.highlight:hover {
+    animation: cyberpulse 2s ease-in-out infinite;
+}
+
+@keyframes cyberpulse {
+    0%, 100% {
+        box-shadow: 
+            0 5px 20px rgba(0, 212, 255, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: 
+            0 8px 30px rgba(0, 212, 255, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Style pour les paragraphes courts (moins de 50 caractères) */
+.event-side-images p[data-short] {
+    padding: 0.8rem 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), rgba(77, 208, 225, 0.1), rgba(0, 212, 255, 0.1));
+    border-radius: 20px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Style pour les derniers paragraphes (souvent conclusions) */
+.event-side-images p:last-child {
+    margin-bottom: 0;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 8px 8px 12px 12px;
+}
+
+.event-side-images p:last-child:hover {
+    border-bottom-color: #00d4ff;
+    box-shadow: 
+        0 5px 20px rgba(0, 212, 255, 0.15),
+        0 2px 10px rgba(0, 212, 255, 0.3);
+}
+
+/* Adaptation responsive */
+@media (max-width: 768px) {
+    .event-side-images p {
+        padding: 1rem;
+        margin: 1rem 0;
+        font-size: 0.95em;
+    }
+    
+    .event-side-images p:hover {
+        transform: translateX(2px);
+    }
+}
+
+
+
+
+
+
+
+/* ===== SCHEDULE AREA STYLES ===== */
+
+/* ---- Style général de la section ---- */
+.schedule-section-area {
+    padding: 60px 0; /* Ajustez le padding selon vos besoins (sp10 semble être une classe existante) */
+    background-color: #f8f9fa; /* Valeur de --schedule-background-color */
+    font-family: 'Arial', sans-serif; /* Choisissez une police moderne */
+}
+
+.schedule-section-area .container {
+    max-width: 1140px; /* Ou la largeur que vous utilisez pour vos conteneurs */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* ---- En-tête de la section ---- */
+.section-header h2 {
+    font-size: 2.5rem; /* Taille de police plus grande et moderne */
+    font-weight: 600;
+    color: #333; /* Valeur de --schedule-text-color */
+    margin-bottom: 30px; /* Espace sous le titre */
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Ligne décorative sous le titre (optionnel) */
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #3498db; /* Valeur de --schedule-primary-color */
+    border-radius: 2px;
+}
+
+/* ---- Style du tableau ---- */
+.schedule table {
+    width: 100%;
+    border-collapse: separate; /* Permet d'utiliser border-spacing et border-radius sur les cellules */
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Ombre douce pour un effet de profondeur */
+    border-radius: 8px; /* Coins arrondis pour le tableau */
+    overflow: hidden; /* Pour que le border-radius s'applique aux cellules d'en-tête/pied */
+}
+
+.schedule th,
+.schedule td {
+    padding: 18px 15px; /* Espacement interne confortable */
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; /* Valeur de --schedule-table-border-color */
+    color: #333; /* Valeur de --schedule-text-color */
+    vertical-align: top; /* Aligne le contenu en haut pour une meilleure lisibilité si le contenu varie en hauteur */
+}
+
+/* ---- En-têtes du tableau (Time, Day Name) ---- */
+.schedule thead th {
+    background-color: #e9ecef; /* Valeur de --schedule-table-header-bg */
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-top: none; /* Pas de bordure en haut pour les en-têtes */
+    border-bottom-width: 2px; /* Bordure inférieure plus épaisse pour l'en-tête */
+    border-bottom-color: #3498db; /* Valeur de --schedule-primary-color */
+}
+
+.schedule thead th:first-child {
+    border-top-left-radius: 8px; /* Arrondi pour le premier en-tête */
+}
+
+.schedule thead th:last-child {
+    border-top-right-radius: 8px; /* Arrondi pour le dernier en-tête */
+}
+
+
+/* ---- Cellule de l'heure ---- */
+.schedule tbody td:first-child {
+    font-weight: 500;
+    color: #3498db; /* Valeur de --schedule-primary-color */
+    min-width: 100px; /* Largeur minimale pour la colonne de l'heure */
+    background-color: #fdfdfe;
+}
+
+/* ---- Cellules des sessions ---- */
+.schedule tbody td {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.schedule tbody tr:last-child td {
+    border-bottom: none; /* Pas de bordure pour la dernière ligne */
+}
+
+/* Amélioration de la lisibilité pour les informations de session */
+.schedule tbody td span { /* "By Speaker" */
+    display: block;
+    font-size: 0.8rem;
+    color: #777; /* Valeur de --schedule-text-light-color */
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.schedule tbody td small em { /* Description */
+    display: block;
+    font-size: 0.75rem;
+    color: #777; /* Valeur de --schedule-text-light-color */
+    margin-top: 8px;
+    font-style: normal; /* On enlève l'italique par défaut de em pour le contrôler ici */
+    opacity: 0.8;
+}
+
+/* Placeholder pour les créneaux vides */
+.schedule tbody td:not(:has(*:not(br):not(small):not(span))) { /* Cible les td qui sont "vides" (contiennent uniquement # ou des sauts à la ligne) */
+    color: #777; /* Valeur de --schedule-text-light-color */
+    font-style: italic;
+    text-align: center;
+}
+
+/* ---- Effets de survol ---- */
+.schedule tbody tr:hover {
+    background-color: #f1f1f1; /* Valeur de --schedule-hover-bg-color */
+}
+
+.schedule tbody td:hover {
+    background-color: rgba(52, 152, 219, 0.1); /* Valeur de --schedule-highlight-color */
+}
+
+/* ---- Responsive Design pour les petits écrans ---- */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .schedule table,
+    .schedule thead,
+    .schedule tbody,
+    .schedule th,
+    .schedule td,
+    .schedule tr {
+        display: block; /* Transforme le tableau en blocs pour l'empilement */
+    }
+
+    .schedule thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px; /* Cache les en-têtes traditionnels */
+    }
+
+    .schedule tr {
+        margin-bottom: 15px;
+        border: 1px solid #dee2e6; /* Valeur de --schedule-table-border-color */
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+     .schedule tr:last-child {
+        margin-bottom: 0;
+    }
+
+
+    .schedule td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; /* Espace pour le label de la colonne */
+        text-align: right; /* Aligne le contenu à droite */
+        min-height: 40px; /* Hauteur minimale pour assurer l'alignement */
+        display: flex; /* Pour mieux aligner le label et le contenu */
+        align-items: center; /* Alignement vertical */
+        justify-content: space-between; /* Espace entre label et contenu */
+    }
+     .schedule td:last-child {
+        border-bottom: none;
+    }
+
+
+    .schedule td:before {
+        /* Utilise les attributs data pour afficher les en-têtes */
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: calc(50% - 30px); /* Largeur du label */
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left; /* Aligne le label à gauche */
+        color: #3498db; /* Valeur de --schedule-primary-color */
+    }
+
+    /* Application des data-label via JavaScript (ou manuellement si vous ne pouvez pas modifier le HTML/Liquid) */
+    /* Si vous pouvez modifier le Liquid, ajoutez data-label="{{ day_data.day_name }}" aux <td> */
+    /* Exemple: <td data-label="{{ day_data.day_name }}"> ... </td> */
+    /* Et <td data-label="Time"> {{ slot }} </td> */
+
+    .schedule tbody td:first-child { /* La cellule du temps */
+        background-color: #e9ecef; /* Valeur de --schedule-table-header-bg */
+        font-weight: bold;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .schedule tbody td:first-child:before {
+      content: "Time"; /* Label spécifique pour la première cellule */
+    }
+
+    .schedule tbody td span,
+    .schedule tbody td small em {
+        text-align: right; /* S'assurer que le texte interne s'aligne aussi */
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    .schedule td {
+        padding-left: 40%; /* Ajuster pour les très petits écrans */
+    }
+    .schedule td:before {
+        width: calc(40% - 20px);
+    }
+}
