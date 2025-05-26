@@ -19,21 +19,10 @@
         <div class="footer-logo-area">
           <img src="{{ '/assets/img/logo/logo2.png' | relative_url }}" alt="" />
           <div class="space16"></div>
-          <p>We are committed to creating a platform where business leaders, innovators, and professionals can come together to exchange ideas</p>
+          <p>We are dedicated to fostering innovation and awareness in cloud computing, distributed systems, IoT Edge, and Fog technologies across Cameroon, embracing our rich cultural heritage.</p>
           <div class="space24"></div>
           <ul>
-            <li>
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </li>
-            <li>
-              <a href="#" class="m-0"><i class="fa-brands fa-pinterest-p"></i></a>
-            </li>
+            {% include partials/socials.html %}
           </ul>
         </div>
       </div>
@@ -41,11 +30,10 @@
         <div class="link-content">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="blog.html">Our Blogs</a></li>
-            <li><a href="event.html">Event Listing</a></li>
-            <li><a href="pricing-plan.html">Pricing Plan</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}">Our Blogs</a></li>
+            <li><a href="{{ '/events/' | relative_url }}">Event Listing</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -55,16 +43,16 @@
           <h3>Contact Us</h3>
           <ul>
             <li>
-              <a href="tel:+11234567890"><img src="{{'/assets/img/icons/phn1.svg' | relative_url }}" alt="" />+1 123 456 7890</a>
+              <a href="tel:+237694086273"><img src="{{'/assets/img/icons/phn1.svg' | relative_url }}" alt="" />+237 694 08 62 73</a>
             </li>
             <li>
-              <a href="#"><img src="{{ '/assets/img/icons/location1.svg' | relative_url }}" alt="" />Secret Location In The UK</a>
+              <a href="#"><img src="{{ '/assets/img/icons/location1.svg' | relative_url }}" alt="" />Secret Location In Cameroon</a>
             </li>
             <li>
               <a href="mailto:contact@c5in.org"><img src="{{ '/assets/img/icons/mail1.svg' | relative_url }}" alt="" />contact@c5in.org</a>
             </li>
             <li>
-              <a href="#"> <img src="{{ '/assets/img/icons/world1.svg' | relative_url }}" alt="" />eventifyevent.com</a>
+              <a href="#"> <img src="{{ '/assets/img/icons/world1.svg' | relative_url }}" alt="" />c5in.org</a>
             </li>
           </ul>
         </div>
@@ -130,7 +118,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="copyright">
-          <p>&copy; Copyright 2024 -Eventify. All Right Reserved</p>
+          <p>&copy; Copyright {{ site.time | date: '%Y' }} - {{ site.title }}. All Right Reserved</p>
         </div>
       </div>
     </div>

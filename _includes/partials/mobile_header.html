@@ -1,0 +1,81 @@
+<!--===== MOBILE HEADER STARTS =======-->
+		<div class="mobile-header mobile-haeder1 d-block d-lg-none">
+			<div class="container-fluid">
+				<div class="col-12">
+					<div class="mobile-header-elements">
+						<div class="mobile-logo">
+							<a href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo/logo1.png' | relative_url }}" alt="" /></a>
+						</div>
+						<div class="mobile-nav-icon dots-menu">
+							<i class="fa-solid fa-bars-staggered"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mobile-sidebar mobile-sidebar1">
+			<div class="logosicon-area">
+				<div class="logos">
+					<img src="{{ '/assets/img/logo/logo2.png' | relative_url }}" alt="" />
+				</div>
+				<div class="menu-close">
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+			</div>
+			<div class="mobile-nav mobile-nav1">
+				<ul class="mobile-nav-list nav-list1">
+					{% for item in site.data.navigation %}
+                        <li><a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a></li>
+                    {% endfor %}
+				</ul>
+				<div class="allmobilesection">
+					<a href="{{ '/contact/' | relative_url }}" class="vl-btn1">Contact Now</a>
+					<div class="single-footer">
+						<h3>Contact Info</h3>
+						<div class="footer1-contact-info">
+							<div class="contact-info-single">
+								<div class="contact-info-icon">
+									<span><i class="fa-solid fa-phone-volume"></i></span>
+								</div>
+								<div class="contact-info-text">
+									<a href="tel:+3(924)4596512">+237 694 08 62 73</a>
+								</div>
+							</div>
+							<div class="contact-info-single">
+								<div class="contact-info-icon">
+									<span><i class="fa-solid fa-envelope"></i></span>
+								</div>
+								<div class="contact-info-text">
+									<a href="mailto:info@example.com">info@c5in.org</a>
+								</div>
+							</div>
+							<div class="single-footer">
+								<h3>Our Location</h3>
+								<div class="contact-info-single">
+									<div class="contact-info-icon">
+										<span><i class="fa-solid fa-location-dot"></i></span>
+									</div>
+									<div class="contact-info-text">
+										<a href="mailto:info@example.com"
+											>Bastos <br />
+											Yaoundé,Cameroon</a
+										>
+									</div>
+								</div>
+							</div>
+							<div class="single-footer">
+								<h3>Social Links</h3>
+								<div class="social-links-mobile-menu">
+									<ul>
+                                        {% include partials/socials.html %}
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--===== MOBILE HEADER STARTS =======-->

@@ -1,0 +1,14 @@
+- name: Menra Wedwang Romial
+  title: PhD Candidate, Entrepreneur, and Founder of C5IN
+  image: menra-wedwang-romial.jpg
+  description: |
+    Menra is a seasoned entrepreneur and the visionary behind C5IN. With a passion for innovation and a commitment to empowering communities, he leads the organization with a focus on sustainable development and social impact.
+  socials:
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/menraromial
+      icon: fa-linkedin-in
+    - name: X
+      url: https://x.com/mwrdev_
+      icon: fa-twitter
+    - name: GitHub
+      url:  https://github.com/menraromial

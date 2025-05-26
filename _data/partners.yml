@@ -2,27 +2,34 @@
   link: https://enspy.fr
   image: enspy.jpg
   type: academic
+  sponsor: true
 - name: Univerty of Yaoundé I
   link: https://www.uy1.cm
   image: uy1.png
   type: academic
+  sponsor: true
 - name: ENSPD
   link: https://enspd.cm
   image: enspd.jpg
   type: academic
+  sponsor: false
 - name: SIANTOU
   link: https://siantou.com
   image: siantou.jpg
   type: academic
+  sponsor: true
 - name: Institut Universitaire Saint Jean
   link: https://iusjp2.cm
   image: saint_jean.jpeg
   type: academic
+  sponsor: true
 - name: Orange
   link: https://www.orange.cm
   image: orange.svg
   type: corporate
+  sponsor: true
 - name: MTN Cameroon
   link: https://www.mtn.cm
   image: mtn.png
   type: corporate
+  sponsor: true

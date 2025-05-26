@@ -26,6 +26,25 @@ layout: default
 		<!--===== BLOG AREA ENDS =======-->
 {% endif %}
 
+
+{% include partials/permanent_team.html %}
+
+{% if page.testimonials and page.testimonials.enabled %}
+  <!--===== TESTIMONIALS AREA STARTS =======-->
+  {% include partials/testimonials.html %}
+  <!--===== TESTIMONIALS AREA ENDS =======-->
+{% endif %}
+
+{% if page.sponsors and page.sponsors.enabled %}
+  <!--===== SPONSORS AREA STARTS =======-->
+  {% include partials/our_sponsor.html %}
+  <!--===== SPONSORS AREA ENDS =======-->
+{% endif %}
+
+
+
+
+
 <!-- <section class="home-section">
   <h2>Welcome to C5IN</h2>
   <p>{{ site.description }}</p>

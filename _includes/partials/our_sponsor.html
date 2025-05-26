@@ -1,0 +1,37 @@
+<!--===== OTHERS AREA STARTS =======-->
+{% assign sponsors = site.data.partners | where: "sponsor", true %}
+{% if sponsors.size > 0 %}  
+    <div class="brands1-section-area sp2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 m-auto">
+                    <div class="brand-header heading2 space-margin60 text-center">
+                        <h5 data-aos="fade-left" data-aos-duration="800">general sponsors</h5>
+                        <div class="space16"></div>
+                        <h2 class="text-anime-style-3">Our Official Sponsors</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                {% for sponsor in sponsors %}
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="800">
+                        <div class="brand-box">
+                            <img src="{{ sponsor.image | prepend: '/assets/img/all-images/partners/'}}" alt="{{ sponsor.name }}" />
+                        </div>
+                    </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>No sponsors available at the moment.</p>
+            </div>
+        </div>
+    </div>
+{% endif %}
+<!--===== OTHERS AREA ENDS =======-->

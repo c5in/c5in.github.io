@@ -1,12 +1,60 @@
-- name: Nom Prénom 1
-  role: Président(e)
-  image: /assets/images/placeholder-profile.png # Remplacez par le chemin de l'image
-  bio: Courte biographie ou description du rôle.
-- name: Nom Prénom 2
-  role: Secrétaire Général(e)
-  image: /assets/images/placeholder-profile.png
-  bio: Courte biographie.
-- name: Nom Prénom 3
-  role: Trésorier(e)
-  image: /assets/images/placeholder-profile.png
-  bio: Courte biographie.
+- name: Menra Wedwang Romial
+  title: PhD Candidate, Entrepreneur, and Founder of C5IN
+  image: menra.png
+  description: |
+    Menra is a seasoned entrepreneur and the visionary behind C5IN. With a passion for innovation and a commitment to empowering communities, he leads the organization with a focus on sustainable development and social impact.
+  socials:
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/menraromial
+      icon: fa-linkedin-in
+    - name: X
+      url: https://x.com/mwrdev_
+      icon: fa-twitter
+    - name: GitHub
+      url:  https://github.com/menraromial
+      icon: fa-github
+- name: Anzie Severin
+  title: PhD Candidate, Community Development Specialist
+  image: anzie.png
+  description: |
+    Dr. Jane Doe is a leading researcher in community development and social innovation. Her work focuses on leveraging technology to enhance community engagement and drive sustainable change.
+  socials:
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/anzie
+      icon: fa-linkedin-in
+    - name: X
+      url: https://x.com/janedoe
+      icon: fa-twitter
+    - name: GitHub
+      url: https://github.com/anzie
+      icon: fa-github
+- name: Mbailasem Hervé
+  title: Software Engineer, Open Source Advocate
+  image: herve.png
+  description: |
+    John is a passionate software engineer with a focus on open source projects. He believes in the power of community-driven development and actively contributes to various initiatives.
+  socials:
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/herve
+      icon: fa-linkedin-in
+    - name: X
+      url: https://x.com/herve
+      icon: fa-twitter
+    - name: GitHub
+      url: https://github.com/herve
+      icon: fa-github
+- name: Guimapi Celeste
+  title: PhD Candidate, Faas Developer
+  image: celeste.png
+  description: |
+    Celeste is a data scientist with a keen interest in artificial intelligence and machine learning. She works on projects that aim to harness the power of data for social good.
+  socials:
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/celeste
+      icon: fa-linkedin-in
+    - name: X
+      url: https://x.com/celeste
+      icon: fa-twitter
+    - name: GitHub
+      url: https://github.com/celeste
+      icon: fa-github
