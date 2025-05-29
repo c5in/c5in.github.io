@@ -24816,3 +24816,33 @@ ul {
         width: calc(40% - 20px);
     }
 }
+
+
+
+ /* Research Areas */
+        .research-areas {
+            padding: 100px 0;
+            background: #fdfdfe;
+            color: black;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .research-card {
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(79, 70, 229, 0.1));
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(100, 255, 218, 0.4);
+            box-shadow: 0 15px 30px rgba(100, 255, 218, 0.1);
+        }

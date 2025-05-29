@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <!--===== HERO AREA STARTS =======-->
-<div class="inner-page-header" style="background-image: url({{'/assets/img/bg/header-bg5.png' | relative_url}});">
+<div class="inner-page-header" style="background-image: url('/assets/img/bg/header-bg5.png');">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 m-auto">
@@ -22,9 +22,11 @@ permalink: /about/
 
 {% include partials/about-section.html %}
 
-<!--===== OTHERS AREA STARTS =======-->
-{% include partials/what-we-do.html %}
-<!--===== OTHERS AREA ENDS =======-->
+{% include partials/research-area.html %}
+
+{% include partials/activities.html %}
+
+
 
 <!--===== PARTNERS AREA STARTS =======-->
 {% include partials/our-partners.html %}
