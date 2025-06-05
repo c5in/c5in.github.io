@@ -1,127 +1,53 @@
-<!-- <footer class="site-footer">
-  <div class="container">
-    <p>© {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
-    <p>
-      {% if site.social.twitter %}<a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer">Twitter</a> | {% endif %}
-      {% if site.social.github %}<a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener noreferrer">GitHub</a> | {% endif %}
-      {% if site.social.linkedin %}<a href="https://linkedin.com/company/{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>{% endif %}
-    </p>
-    <p>Fostering Tech Innovation in Cameroon.</p>
-  </div>
-</footer> -->
-
-
-<!--===== FOOTER AREA STARTS =======-->
-<div class="footer1-sertion-area">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-6">
-        <div class="footer-logo-area">
-          <img src="{{ '/assets/img/logo/logo2.png' | relative_url }}" alt="" />
-          <div class="space16"></div>
-          <p>We are dedicated to fostering innovation and awareness in cloud computing, distributed systems, IoT Edge, and Fog technologies across Cameroon, embracing our rich cultural heritage.</p>
-          <div class="space24"></div>
-          <ul>
-            {% include partials/socials.html %}
-          </ul>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-cloud me-2"></i>C5IN</h5>
+                    <p>Organisation dédiée au développement de la recherche dans le domaine du continuum Cloud-Edge-IoT au Cameroun.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#recherche">Recherche</a></li>
+                        <li><a href="#evenements">Événements</a></li>
+                        <li><a href="#actualites">Actualités</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Recherche</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Cloud Computing</a></li>
+                        <li><a href="#">Edge Computing</a></li>
+                        <li><a href="#">Internet des Objets</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Yaoundé, Cameroun</li>
+                        <li><i class="fas fa-envelope me-2"></i>contact@c5in.org</li>
+                        <li><i class="fas fa-phone me-2"></i>+237 xxx xxx xxx</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 C5IN. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-2 col-md-6">
-        <div class="link-content">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
-            <li><a href="{{ '/blog/' | relative_url }}">Our Blogs</a></li>
-            <li><a href="{{ '/events/' | relative_url }}">Event Listing</a></li>
-            <li><a href="{{ '/contact/' | relative_url }}">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <div class="link-content2">
-          <h3>Contact Us</h3>
-          <ul>
-            <li>
-              <a href="tel:+237694086273"><img src="{{'/assets/img/icons/phn1.svg' | relative_url }}" alt="" />+237 694 08 62 73</a>
-            </li>
-            <li>
-              <a href="#"><img src="{{ '/assets/img/icons/location1.svg' | relative_url }}" alt="" />Secret Location In Cameroon</a>
-            </li>
-            <li>
-              <a href="mailto:contact@c5in.org"><img src="{{ '/assets/img/icons/mail1.svg' | relative_url }}" alt="" />contact@c5in.org</a>
-            </li>
-            <li>
-              <a href="#"> <img src="{{ '/assets/img/icons/world1.svg' | relative_url }}" alt="" />c5in.org</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="footer-social-box">
-          <h3>Our Recent Event Gallery</h3>
-          <div class="space12"></div>
-          <!-- <div class="row">
-            <div class="col-lg-4 col-md-4 col-4">
-              <div class="img1">
-                <img src="assets/img/all-images/footer/footer-img1.png" alt="" />
-                <div class="icons">
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-              <div class="img1">
-                <img src="assets/img/all-images/footer/footer-img2.png" alt="" />
-                <div class="icons">
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-              <div class="img1">
-                <img src="assets/img/all-images/footer/footer-img3.png" alt="" />
-                <div class="icons">
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-              <div class="img1">
-                <img src="assets/img/all-images/footer/footer-img4.png" alt="" />
-                <div class="icons">
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-              <div class="img1">
-                <img src="assets/img/all-images/footer/footer-img5.png" alt="" />
-                <div class="icons">
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-              <div class="img1">
-                <img src="assets/img/all-images/footer/footer-img6.png" alt="" />
-                <div class="icons">
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <div class="space60"></div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="copyright">
-          <p>&copy; Copyright {{ site.time | date: '%Y' }} - {{ site.title }}. All Right Reserved</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--===== FOOTER AREA ENDS =======-->
+    </footer>

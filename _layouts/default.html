@@ -5,18 +5,12 @@
 </head>
 <body class="homepage1-body">
   {% include header.html %}
-  {% include partials/mobile_header.html %}
   
     {{ content }}
  
   {% include footer.html %}
   <!-- Add JS scripts here if needed -->
   {% include scripts.html %}
-  <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        AOS.init();
-        console.log("AOS initialized");
-      });
-  </script>
+
 </body>
 </html>

@@ -3,80 +3,376 @@ layout: default
 ---
 {% include hero.html %}
 
-{% include partials/about-section.html %}
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number" data-count="150">0</span>
+                        <div class="stat-label">Chercheurs affiliés</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number" data-count="25">0</span>
+                        <div class="stat-label">Projets de recherche</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number" data-count="80">0</span>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number" data-count="12">0</span>
+                        <div class="stat-label">Événements organisés</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Annonce importante (style bannière jaune) -->
+    <section class="c5in-bg-yellow text-dark py-4">
+        <div class="container text-center">
+            <h4><i class="fas fa-star me-2"></i>Prochain Grand Événement : <a href="#" class="text-dark fw-bold">Conférence C5IN Annuelle 2025</a> - Inscrivez-vous maintenant !</h4>
+        </div>
+    </section>
+    <!-- Research Areas -->
+    <section id="recherche" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Domaines de Recherche</h2>
+                    <p class="lead">Nos axes de recherche couvrent l'ensemble du continuum Cloud-Edge-IoT</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card research-card fade-in">
+                        <div class="card-body text-center">
+                            <div class="icon-box icon-research">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h5 class="card-title">Cloud Computing</h5>
+                            <p class="card-text">Recherche sur l'optimisation des infrastructures cloud, la virtualisation et les architectures distribuées pour améliorer les performances.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card research-card fade-in">
+                        <div class="card-body text-center">
+                            <div class="icon-box icon-research">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h5 class="card-title">Edge Computing</h5>
+                            <p class="card-text">Développement de solutions de calcul en périphérie pour réduire la latence et optimiser le traitement des données en temps réel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card research-card fade-in">
+                        <div class="card-body text-center">
+                            <div class="icon-box icon-research">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <h5 class="card-title">Internet des Objets</h5>
+                            <p class="card-text">Innovation dans les protocoles de communication IoT, la sécurité des objets connectés et l'interopérabilité des systèmes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-{% include partials/upcoming_events.html %}
+    <!-- Upcoming Events -->
+    <section id="evenements" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title "><i class="far fa-calendar-alt me-2"></i> Événements à Venir</h2>
+                    <p class="lead">Participez à nos conférences, workshops et séminaires</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card event-card fade-in">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box icon-events me-3">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div>
+                                    <h5 class="card-title mb-1">Conférence C5IN 2025</h5>
+                                    <small class="text-muted">15-17 Juillet 2025 • Yaoundé</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Conférence internationale sur les systèmes distribués et le continuum Cloud-Edge-IoT. Présentations de travaux de recherche et networking.</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card event-card fade-in">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box icon-events me-3">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h5 class="card-title mb-1">Workshop Edge Computing</h5>
+                                    <small class="text-muted">28 Juin 2025 • Douala</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Atelier pratique sur les dernières avancées en edge computing et leurs applications dans l'industrie camerounaise.</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card event-card fade-in">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box icon-events me-3">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h5 class="card-title mb-1">École d'été IoT</h5>
+                                    <small class="text-muted">05-12 Août 2025 • Bamenda</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Formation intensive sur l'Internet des Objets destinée aux étudiants et jeunes chercheurs africains.</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Candidater</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card event-card fade-in">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box icon-events me-3">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div>
+                                    <h5 class="card-title mb-1">Hackathon Innovation</h5>
+                                    <small class="text-muted">20-22 Septembre 2025 • Garoua</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Compétition de développement d'applications innovantes basées sur les technologies Cloud-Edge-IoT.</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Participer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-{% if page.latest_posts and page.latest_posts.enabled %}
-		<!--===== BLOG AREA STARTS =======-->
-		<div class="blog1-section-area sp2">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 m-auto">
-						<div class="blog-header text-center heading2 space-margin60">
-							<h5 data-aos="fade-left" data-aos-duration="900">News & updates</h5>
-							<div class="space16"></div>
-							<h2 class="text-anime-style-3">Balancing Profit & Purpose</h2>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					{% include partials/latest_post.html %}
-				</div>
-			</div>
-		</div>
-		<!--===== BLOG AREA ENDS =======-->
-{% endif %}
+    <!-- Latest News -->
+    <section id="actualites" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title"><i class="far fa-newspaper me-2"></i> Actualités Récentes</h2>
+                    <p class="lead">Restez informés de nos dernières avancées et annonces</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card news-card fade-in">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box icon-news me-3">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <small class="text-muted">25 Mai 2025</small>
+                            </div>
+                            <h5 class="card-title">Nouveau partenariat avec l'Université de Dschang</h5>
+                            <p class="card-text">C5IN annonce un partenariat stratégique pour développer un laboratoire de recherche en systèmes distribués.</p>
+                            <a href="#" class="text-decoration-none">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card news-card fade-in">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box icon-news me-3">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <small class="text-muted">18 Mai 2025</small>
+                            </div>
+                            <h5 class="card-title">Prix de l'innovation technologique</h5>
+                            <p class="card-text">Notre projet de plateforme IoT pour l'agriculture intelligente remporte le prix national d'innovation.</p>
+                            <a href="#" class="text-decoration-none">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card news-card fade-in">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box icon-news me-3">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <small class="text-muted">10 Mai 2025</small>
+                            </div>
+                            <h5 class="card-title">Publication dans IEEE Transactions</h5>
+                            <p class="card-text">Notre recherche sur l'optimisation des réseaux edge est publiée dans une revue internationale prestigieuse.</p>
+                            <a href="#" class="text-decoration-none">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Rejoignez notre communauté</h2>
+                    <p class="lead mb-4">Collaborons pour faire avancer la recherche en systèmes distribués au Cameroun</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 fade-in">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-users text-primary mb-3" style="font-size: 2rem;"></i>
+                                    <h5>Devenez membre</h5>
+                                    <p>Rejoignez notre réseau de chercheurs et accédez à nos ressources exclusives.</p>
+                                    <a href="#" class="btn btn-primary">S'inscrire</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 fade-in">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-handshake text-primary mb-3" style="font-size: 2rem;"></i>
+                                    <h5>Partenariats</h5>
+                                    <p>Établissons des collaborations pour développer ensemble des projets innovants.</p>
+                                    <a href="#" class="btn btn-primary">Nous contacter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-{% include partials/permanent_team.html %}
 
-{% if site.testimonials and site.testimonials.enabled %}
-  <!--===== TESTIMONIALS AREA STARTS =======-->
-  {% include partials/testimonials.html %}
-  <!--===== TESTIMONIALS AREA ENDS =======-->
-{% endif %}
+    <!-- Permanent Members Section -->
+    <section id="membres" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title"><i class="fas fa-users-cog me-2"></i> Membres Permanents</h2>
+                    <p class="lead">Nos chercheurs et experts dédiés à l'avancement du C5IN.</p>
+                </div>
+            </div>
+            <!-- Horizontal Scrollable Row for Members -->
+            <div class="horizontal-scroll-wrapper">
+                <div class="horizontal-scroll-content">
+                    <!-- Membre 1 -->
+                    <div class="member-card-scrollable text-center fade-in">
+                        <img src="/assets/img/members/menra.jpg" class="member-photo" alt="Menra">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Nom Prénom</h5>
+                            <p class="card-text text-muted">Directeur de Recherche</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
+                        </div>
+                    </div>
+                    <!-- Membre 2 -->
+                    <div class="member-card-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150/3498db/FFFFFF?text=Photo" class="member-photo" alt="Nom du Membre">
+                        <div class="card-body">
+                            <h5 class="card-title">Prof. Autre Nom</h5>
+                            <p class="card-text text-muted">Chercheur Principal IoT</p>
+                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
+                        </div>
+                    </div>
+                    <!-- Membre 3 -->
+                    <div class="member-card-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150/f1c40f/2c3e50?text=Photo" class="member-photo" alt="Nom du Membre">
+                        <div class="card-body">
+                            <h5 class="card-title">Mme. Expert Nom</h5>
+                            <p class="card-text text-muted">Spécialiste Edge Computing</p>
+                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
+                        </div>
+                    </div>
+                    <!-- Membre 4 -->
+                    <div class="member-card-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150/27ae60/FFFFFF?text=Photo" class="member-photo" alt="Nom du Membre">
+                        <div class="card-body">
+                            <h5 class="card-title">Mr. Tech Lead</h5>
+                            <p class="card-text text-muted">Ingénieur Cloud</p>
+                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
+                        </div>
+                    </div>
+                    <!-- Membre 5 -->
+                    <div class="member-card-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150/e74c3c/FFFFFF?text=Photo" class="member-photo" alt="Nom du Membre">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Alpha Beta</h5>
+                            <p class="card-text text-muted">Chercheur Senior</p>
+                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
+                        </div>
+                    </div>
+                    <!-- Ajoutez plus de membres ici pour voir l'effet de défilement -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-{% if site.sponsors and site.sponsors.enabled %}
-  <!--===== SPONSORS AREA STARTS =======-->
-  {% include partials/our_sponsor.html %}
-  <!--===== SPONSORS AREA ENDS =======-->
-{% endif %}
-
-
-
-
-
-<!-- <section class="home-section">
-  <h2>Welcome to C5IN</h2>
-  <p>{{ site.description }}</p>
-  <p><a href="{{ '/pages/about/' | relative_url }}" class="btn">Learn More About Us</a></p>
-</section>
-
-<section class="home-section">
-  <h2>Latest News</h2>
-  <div class="post-list">
-    {% for post in site.posts limit:3 %}
-      {% include post_card.html item=post %}
-    {% endfor %}
-  </div>
-  <p><a href="{{ '/pages/blog/' | relative_url }}" class="btn">View All News</a></p>
-</section>
-
-<section class="home-section">
-  <h2>Upcoming Events</h2>
-  <div class="event-list">
-    {% assign upcoming_events = site.events | where_exp: "item", "item.date >= site.time" | sort: "date" %}
-    {% for event in upcoming_events limit:3 %}
-      {% include event_card.html item=event %}
-    {% else %}
-      <p>No upcoming events scheduled. Check back soon!</p>
-    {% endfor %}
-  </div>
-  <p><a href="{{ '/pages/events/' | relative_url }}" class="btn">View All Events</a></p>
-</section>
-
-<section class="home-section">
-  <h2>Our Mission</h2>
-  <p>To be a catalyst for technological innovation in Cameroon by promoting the understanding and adoption of cloud computing, distributed systems, IoT Edge, and Fog computing. We strive to empower individuals and organizations through education, community building, and practical application of these transformative technologies.</p>
-</section> -->
+    <!-- Partners Section -->
+    <section id="partenaires" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title"><i class="fas fa-handshake me-2"></i> Nos Partenaires</h2>
+                    <p class="lead">Organisations et institutions qui soutiennent notre mission et collaborent avec nous.</p>
+                </div>
+            </div>
+            <!-- Horizontal Scrollable Row for Partners -->
+            <div class="horizontal-scroll-wrapper">
+                <div class="horizontal-scroll-content partner-scroll-content">
+                    <!-- Partenaire 1 -->
+                    <div class="partner-logo-scrollable text-center fade-in">
+                        <img src="/assets/img/partners/enspy.jpg" alt="Logo Partenaire 1">
+                    </div>
+                    <!-- Partenaire 2 -->
+                    <div class="partner-logo-scrollable text-center fade-in">
+                        <img src="/assets/img/partners/enspd.jpg" alt="Logo Partenaire 2">
+                    </div>
+                    <!-- Partenaire 3 -->
+                    <div class="partner-logo-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150x80/CCCCCC/777777?text=Logo+Partenaire+3" alt="Logo Partenaire 3">
+                    </div>
+                    <!-- Partenaire 4 -->
+                    <div class="partner-logo-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150x80/BBBBBB/666666?text=Logo+Partenaire+4" alt="Logo Partenaire 4">
+                    </div>
+                    <!-- Partenaire 5 -->
+                    <div class="partner-logo-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150x80/AAAAAA/555555?text=Logo+Partenaire+5" alt="Logo Partenaire 5">
+                    </div>
+                    <!-- Partenaire 6 -->
+                    <div class="partner-logo-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150x80/999999/444444?text=Logo+Partenaire+6" alt="Logo Partenaire 6">
+                    </div>
+                    <!-- Partenaire 7 -->
+                    <div class="partner-logo-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150x80/888888/333333?text=Logo+Partenaire+7" alt="Logo Partenaire 7">
+                    </div>
+                     <!-- Partenaire 8 -->
+                    <div class="partner-logo-scrollable text-center fade-in">
+                        <img src="https://via.placeholder.com/150x80/777777/222222?text=Logo+Partenaire+8" alt="Logo Partenaire 8">
+                    </div>
+                    <!-- Ajoutez plus de partenaires ici pour voir l'effet de défilement -->
+                </div>
+            </div>
+        </div>
+    </section>
