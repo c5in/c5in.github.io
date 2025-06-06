@@ -3,6 +3,7 @@ layout: event
 title: "Unlocking Growth: Cloud Solutions for Cameroonian SMEs"
 date: 2025-06-01
 time: "10:00 AM - 1:00 PM (WAT)"
+abbrev: Growth
 location: "C5IN Hub, Yaoundé (Online Stream Available)"
 type: "Workshop"
 excerpt: "A practical workshop demonstrating how Small and Medium Enterprises in Cameroon can leverage cloud computing for efficiency, scalability, and market expansion."

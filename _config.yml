@@ -29,15 +29,28 @@ members_config:
     placeholder: "https://placehold.co/150x150/1e5099/FFFFFF?text="
     image_path: "/assets/img/members/"
 # Events
-events_defaults:
-  enabled: true
-  image: "event-img1.png" 
+events_config:
+  defaults:
+    placeholder: "https://placehold.co/750x400/1e5099/FFFFFF?text="
+    image_path: "/assets/img/events/" 
 
 news_config:
   defaults:
     placeholder: "https://placehold.co/600x400?text="
     image_path: "/assets/img/news/"
 
+stats:
+  enabled: false
+  items:
+    - title: "Members"
+      count: 100 # Update this with actual member count
+      icon: "fa-users"
+    - title: "Events"
+      count: 50 # Update this with actual event count
+      icon: "fa-calendar-alt"
+    - title: "Publications"
+      count: 20 # Update this with actual publication count
+      icon: "fa-file-alt"
 # Build settings
 markdown: kramdown
 highlighter: rouge

@@ -3,19 +3,18 @@ layout: default
 ---
 
 <!--===== HERO AREA STARTS =======-->
-<div class="inner-page-header" style="background-image: url(/assets/img/bg/header-bg10.png)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 m-auto">
-        <div class="heading1 text-center">
-          <h1>Event Schedule</h1>
-          <div class="space20"></div>
-          <a href="{{ '/' | relative_url }}">Home <i class="fa-solid fa-angle-right"></i> <span>Event Schedule</span></a>
-        </div>
-      </div>
+
+<!-- Hero Section pour le détail de l'événement -->
+<section class="event-detail-hero hero-section">
+    <div class="container">
+        <h1 class="fw-bold mt-5 fade-in">{{page.title}}</h1>
+        <p class="event-meta-short">
+            <i class="fas fa-calendar-alt"></i> {{ page.date | date: "%d %B %Y" }} |
+            <i class="fas fa-map-marker-alt"></i> {{page.location}}
+        </p>
     </div>
-  </div>
-</div>
+</section>
+
 <!--===== HERO AREA ENDS =======-->
 
 {% include partials/event_details.html %}
@@ -80,4 +79,15 @@ layout: default
         </div>
     </div>
     {% endif %}
-    <!--===== SCHEDULE AREA ENDS =======-->
+<!--===== SCHEDULE AREA ENDS =======-->
+
+{% if page.loc_url %}
+<div class="mapouter container mb-5">
+    <div class="section-header">
+            <h2>Localisation</h2>
+    </div>
+    <div class="gmap_canvas">
+        <iframe src="{{page.loc_url}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+{% endif %}

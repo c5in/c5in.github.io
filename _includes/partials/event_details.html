@@ -1,14 +1,16 @@
 <!--===== EVENT AREA STARTS =======-->
-<div class="event-sidepage-section-area sp8">
+<div class="event-detail-content">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7">
-                <div class="event-side-images">
+            <div class="col-lg-8">
+                {% if page.image %}
+                    <img src="{{page.image | prepend: site.events_config.defaults.image_path }}" alt="{{page.title}}" class="img-fluid rounded mb-4 shadow">
+                {% else %}
+                    <img src="{{site.events_config.defaults.placeholder}}{{page.abbrev}}" alt="{{page.title}}" class="img-fluid rounded mb-4 shadow">
+                {% endif %}
+                <!-- <div class="event-side-images">
                     <div class="img1">
-                        {% assign image_path = page.image  %}
-                        {% if image_path == "" or image_path == nil %}
-                            {% assign image_path = site.events_defaults.image %}
-                        {% endif %}
+                        
                         <img src="{{ image_path | prepend: '/assets/img/all-images/event/' }}" alt="" />
                     </div>
                     <div class="space32"></div>
@@ -16,164 +18,64 @@
                     <div class="space16"></div>
                     {{ content | markdownify }}
                     <div class="space40"></div>
-                     <!-- <h4>Event Speakers</h4>
-                   <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="our-team-boxarea">
-                                <div class="team-widget-area">
-                                    <img src="assets/img/elements/elements25.png" alt="" class="elements21" />
-                                    <img src="assets/img/elements/elements26.png" alt="" class="elements22" />
-                                    <div class="img1">
-                                        <img src="assets/img/all-images/team/team-img12.png" alt="" class="team-img4" />
-                                        <div class="share">
-                                            <a href="#"><img src="assets/img/icons/share1.svg" alt="" /></a>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="icon1"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon2"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon3"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon4"><i class="fa-brands fa-pinterest-p"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="space28"></div>
-                                <div class="content-area">
-                                    <a href="speakers-single.html">Alex Robertson</a>
-                                    <div class="space16"></div>
-                                    <p>UI/UX Designer</p>
-                                </div>
-                            </div>
+                    
+                </div> -->
+                <h2 class="event-section-title">À Propos de l'Événement</h2>
+                {{ content | markdownify }}
+            </div>
+            
+            <aside class="col-lg-4 event-detail-sidebar">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-info-circle me-2"></i>Informations Clés
                         </div>
+                        <div class="card-body">
+                            <ul>
+                                {% if page.plage %}
+                                <li><i class="fas fa-calendar-alt"></i> <strong>Dates :</strong> {{page.plage}}</li>
+                                {% endif %}
+                                <li><i class="fas fa-clock"></i> <strong>Horaires :</strong> {{page.time}} chaque jour</li>
+                                <li><i class="fas fa-map-marker-alt"></i> <strong>Lieu :</strong> {{page.location}}</li>
+                                {% if page.cibles %}
+                                <li><i class="fas fa-users"></i> <strong>Public Cible :</strong> {{ page.cibles | join: ", " }}</li>
+                                {% endif %}
+                                <li><i class="fas fa-language"></i> <strong>Langues :</strong> {{page.lang}}</li>
+                                
+                            </ul>
+                            <a href="{{page.registration_link}}" target="_blank" class="btn btn-success btn-lg w-100 btn-register">
+                                <i class="fas fa-edit me-2"></i>S'inscrire Maintenant
+                            </a>
+                        </div>
+                    </div>
 
-                        <div class="col-lg-4 col-md-6">
-                            <div class="our-team-boxarea">
-                                <div class="team-widget-area">
-                                    <img src="assets/img/elements/elements25.png" alt="" class="elements21" />
-                                    <img src="assets/img/elements/elements26.png" alt="" class="elements22" />
-                                    <div class="img1">
-                                        <img src="assets/img/all-images/team/team-img13.png" alt="" class="team-img4" />
-                                        <div class="share">
-                                            <a href="#"><img src="assets/img/icons/share1.svg" alt="" /></a>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="icon1"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon2"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon3"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon4"><i class="fa-brands fa-pinterest-p"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="space28"></div>
-                                <div class="content-area">
-                                    <a href="speakers-single.html">Alexy Sammony</a>
-                                    <div class="space16"></div>
-                                    <p>UI/UX Designer</p>
-                                </div>
-                            </div>
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">
+                           <i class="fas fa-ticket-alt me-2"></i>Inscription
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="our-team-boxarea">
-                                <div class="team-widget-area">
-                                    <img src="assets/img/elements/elements25.png" alt="" class="elements21" />
-                                    <img src="assets/img/elements/elements26.png" alt="" class="elements22" />
-                                    <div class="img1">
-                                        <img src="assets/img/all-images/team/team-img14.png" alt="" class="team-img4" />
-                                        <div class="share">
-                                            <a href="#"><img src="assets/img/icons/share1.svg" alt="" /></a>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="icon1"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon2"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon3"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="icon4"><i class="fa-brands fa-pinterest-p"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="space28"></div>
-                                <div class="content-area">
-                                    <a href="speakers-single.html">Kireon Pollardy</a>
-                                    <div class="space16"></div>
-                                    <p>UI/UX Designer</p>
-                                </div>
-                            </div>
+                        <div class="card-body">
+                            <p>Les inscriptions sont ouvertes ! Profitez des tarifs préférentiels jusqu'au 30 Mai 2025.</p>
+                            <ul>
+                                <li><strong>Tarif Étudiant :</strong> 25 000 XAF</li>
+                                <li><strong>Tarif Académique :</strong> 50 000 XAF</li>
+                                <li><strong>Tarif Professionnel :</strong> 100 000 XAF</li>
+                            </ul>
+                            <a href="formulaire-inscription-conf-2025.html" class="btn btn-success btn-lg w-100 btn-register">
+                                <i class="fas fa-edit me-2"></i>S'inscrire Maintenant
+                            </a>
+                            <small class="d-block text-center mt-2">Places limitées.</small>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-map-signs me-2"></i>Plan d'Accès & Hôtels
+                        </div>
+                        <div class="card-body">
+                            <p>Le Palais des Congrès est facilement accessible. <a href="https://www.google.com/maps/place/Palais+des+Congr%C3%A8s+de+Yaound%C3%A9/@3.874409,11.517306,17z" target="_blank" rel="noopener noreferrer">Voir sur Google Maps</a>.</p>
+                            <p>Nous avons négocié des tarifs spéciaux avec des hôtels partenaires. <a href="hotels-partenaires-conf-2025.html">Consultez la liste</a>.</p>
                         </div>
                     </div> -->
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="shedule-listarea">
-                    <div class="content-area">
-                        <ul>
-                            <li>
-                                <a href="#"><img src="{{ '/assets/img/icons/clock1.svg' | relative_url }}" alt="" />{{ page.time }} <span> | </span></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{ '/assets/img/icons/location1.svg' | relative_url }}" alt="" />{{ page.location}} </a>
-                            </li>
-                        </ul>
-                        <div class="space20"></div>
-                        <a href="#" class="head">{{ page.title }}</a>
-                        <div class="space24"></div>
-                        <!-- <div class="author-area">
-                            <div class="autho-name-area">
-                                <div class="img1">
-                                    <img src="assets/img/all-images/testimonials/testimonial-img1.png" alt="" />
-                                </div>
-                                <div class="text">
-                                    <a href="speakers-single.html">Alex Roberton</a>
-                                    <div class="space8"></div>
-                                    <p>UI/UX Designer</p>
-                                </div>
-                            </div>
-
-                            <div class="autho-name-area" style="padding: 0 0 0 12px; border: none">
-                                <div class="img1">
-                                    <img src="assets/img/all-images/testimonials/testimonial-img2.png" alt="" />
-                                </div>
-                                <div class="text">
-                                    <a href="speakers-single.html">Alexys Archer</a>
-                                    <div class="space8"></div>
-                                    <p>WP Developer</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="space24"></div>
-                        <div class="btn-area1">
-                            <a href="pricing-plan.html" class="vl-btn1"><span class="demo">purchase ticket Now</span></a>
-                        </div> -->
-                    </div>
-                    <div class="space30"></div>
-                    <div class="mapouter">
-                        <div class="gmap_canvas">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1990.3785671606165!2d11.500080143147636!3d3.8622094363456614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcfa23aace247%3A0xe07671abb10169f9!2s%C3%89cole%20Nationale%20Sup%C3%A9rieure%20Polytechnique%20de%20Yaound%C3%A9!5e0!3m2!1sfr!2sfr!4v1748265115918!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </aside>
         </div>
     </div>
 </div>

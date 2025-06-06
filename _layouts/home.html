@@ -1,39 +1,13 @@
 ---
 layout: default
+latest_posts:
+  limit: 3
 ---
 {% include hero.html %}
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <div class="stat-item fade-in">
-                        <span class="stat-number" data-count="150">0</span>
-                        <div class="stat-label">Chercheurs affiliés</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item fade-in">
-                        <span class="stat-number" data-count="25">0</span>
-                        <div class="stat-label">Projets de recherche</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item fade-in">
-                        <span class="stat-number" data-count="80">0</span>
-                        <div class="stat-label">Publications</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item fade-in">
-                        <span class="stat-number" data-count="12">0</span>
-                        <div class="stat-label">Événements organisés</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{% if site.stats.enabled %}
+{% include partials/stats.html %}
+{% endif %}
     <!-- Annonce importante (style bannière jaune) -->
     <section class="c5in-bg-yellow text-dark py-4">
         <div class="container text-center">
@@ -88,145 +62,10 @@ layout: default
     </section>
 
     <!-- Upcoming Events -->
-    <section id="evenements" class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title "><i class="far fa-calendar-alt me-2"></i> Événements à Venir</h2>
-                    <p class="lead">Participez à nos conférences, workshops et séminaires</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card event-card fade-in">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box icon-events me-3">
-                                    <i class="fas fa-calendar-alt"></i>
-                                </div>
-                                <div>
-                                    <h5 class="card-title mb-1">Conférence C5IN 2025</h5>
-                                    <small class="text-muted">15-17 Juillet 2025 • Yaoundé</small>
-                                </div>
-                            </div>
-                            <p class="card-text">Conférence internationale sur les systèmes distribués et le continuum Cloud-Edge-IoT. Présentations de travaux de recherche et networking.</p>
-                            <a href="#" class="btn btn-sm btn-outline-success">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card event-card fade-in">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box icon-events me-3">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div>
-                                    <h5 class="card-title mb-1">Workshop Edge Computing</h5>
-                                    <small class="text-muted">28 Juin 2025 • Douala</small>
-                                </div>
-                            </div>
-                            <p class="card-text">Atelier pratique sur les dernières avancées en edge computing et leurs applications dans l'industrie camerounaise.</p>
-                            <a href="#" class="btn btn-sm btn-outline-success">S'inscrire</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card event-card fade-in">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box icon-events me-3">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div>
-                                    <h5 class="card-title mb-1">École d'été IoT</h5>
-                                    <small class="text-muted">05-12 Août 2025 • Bamenda</small>
-                                </div>
-                            </div>
-                            <p class="card-text">Formation intensive sur l'Internet des Objets destinée aux étudiants et jeunes chercheurs africains.</p>
-                            <a href="#" class="btn btn-sm btn-outline-success">Candidater</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card event-card fade-in">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box icon-events me-3">
-                                    <i class="fas fa-lightbulb"></i>
-                                </div>
-                                <div>
-                                    <h5 class="card-title mb-1">Hackathon Innovation</h5>
-                                    <small class="text-muted">20-22 Septembre 2025 • Garoua</small>
-                                </div>
-                            </div>
-                            <p class="card-text">Compétition de développement d'applications innovantes basées sur les technologies Cloud-Edge-IoT.</p>
-                            <a href="#" class="btn btn-sm btn-outline-success">Participer</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   {% include partials/upcoming_events.html %}
 
     <!-- Latest News -->
-    <section id="actualites" class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title"><i class="far fa-newspaper me-2"></i> Actualités Récentes</h2>
-                    <p class="lead">Restez informés de nos dernières avancées et annonces</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card news-card fade-in">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box icon-news me-3">
-                                    <i class="fas fa-newspaper"></i>
-                                </div>
-                                <small class="text-muted">25 Mai 2025</small>
-                            </div>
-                            <h5 class="card-title">Nouveau partenariat avec l'Université de Dschang</h5>
-                            <p class="card-text">C5IN annonce un partenariat stratégique pour développer un laboratoire de recherche en systèmes distribués.</p>
-                            <a href="#" class="text-decoration-none">Lire la suite <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card news-card fade-in">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box icon-news me-3">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <small class="text-muted">18 Mai 2025</small>
-                            </div>
-                            <h5 class="card-title">Prix de l'innovation technologique</h5>
-                            <p class="card-text">Notre projet de plateforme IoT pour l'agriculture intelligente remporte le prix national d'innovation.</p>
-                            <a href="#" class="text-decoration-none">Lire la suite <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card news-card fade-in">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box icon-news me-3">
-                                    <i class="fas fa-book-open"></i>
-                                </div>
-                                <small class="text-muted">10 Mai 2025</small>
-                            </div>
-                            <h5 class="card-title">Publication dans IEEE Transactions</h5>
-                            <p class="card-text">Notre recherche sur l'optimisation des réseaux edge est publiée dans une revue internationale prestigieuse.</p>
-                            <a href="#" class="text-decoration-none">Lire la suite <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include partials/latest_post.html %}
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
@@ -252,7 +91,7 @@ layout: default
                                     <i class="fas fa-handshake text-primary mb-3" style="font-size: 2rem;"></i>
                                     <h5>Partenariats</h5>
                                     <p>Établissons des collaborations pour développer ensemble des projets innovants.</p>
-                                    <a href="#" class="btn btn-primary">Nous contacter</a>
+                                    <a href="{{'/contact' | relative_url}}" class="btn btn-primary">Nous contacter</a>
                                 </div>
                             </div>
                         </div>

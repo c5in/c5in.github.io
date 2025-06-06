@@ -6,32 +6,37 @@
     {% else %}
         {% assign latest_posts_limit = latest_posts_size %}
     {% endif %}
-    {% for item in latest_posts limit: latest_posts_limit %}
+    
 
-        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800">
-            <div class="blog1-auhtor-boxarea">
-                <div class="img1 image-anime">
-                    <img src="{{ item.image | prepend: '/assets/img/all-images/blog/' }}" alt="{{ item.title }}" />
-                </div>
-
-                <div class="content-area">
-                    <ul>
-                        <li>
-                            <a href="{{ item.url | relative_url }}"><img src="{{ '/assets/img/icons/calender1.svg' | relative_url }}" alt="" /><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%B %d, %Y" }}</time></a>
-                        </li>
-                    </ul>
-                    <div class="space20"></div>
-                    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                    <div class="space24"></div>
-                    <div class="btn-area1">
-                        <a href="{{ item.url | relative_url }}" class="vl-btn2">Read More</a>
-                    </div>
+       <section id="actualites" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title"><i class="far fa-newspaper me-2"></i> Actualités Récentes</h2>
+                    <p class="lead">Restez informés de nos dernières avancées et annonces</p>
                 </div>
             </div>
+            <div class="row g-4">
+                {% for news in latest_posts limit: latest_posts_limit %}
+
+                <div class="col-md-4">
+                    <div class="card news-card fade-in">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box icon-news me-3">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <small class="text-muted">{{ news.date | date: "%d %B %Y" }}</small>
+                            </div>
+                            <h5 class="card-title">{{news.title}}</h5>
+                            <p class="card-text">{{news.excerpt}}</p>
+                            <a href="{{news.url | relative_url}}" class="text-decoration-none">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-    {% endfor %}
-{% else %}
-    <div class="col-lg-12">
-        <p>No latest posts available.</p>
-    </div>
+    </section>
+    
 {% endif %}

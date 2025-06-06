@@ -1,452 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Page non trouvée (404) - C5IN</title>
+    <meta name="author" content="{{ site.author.name }}">
+
+    <link rel="icon" href="/assets/img/logo/logo2.png" type="image/x-icon">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}"> -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body, html {
+            height: 100%;
         }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+        .page-404-wrapper {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Animated background particles */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .particle:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
-        .particle:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-delay: 2s; }
-        .particle:nth-child(3) { width: 100px; height: 100px; left: 35%; animation-delay: 4s; }
-        .particle:nth-child(4) { width: 40px; height: 40px; left: 50%; animation-delay: 0s; }
-        .particle:nth-child(5) { width: 70px; height: 70px; left: 65%; animation-delay: 3s; }
-        .particle:nth-child(6) { width: 90px; height: 90px; left: 80%; animation-delay: 1s; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
-            50% { transform: translateY(-100px) rotate(180deg); opacity: 0.8; }
-        }
-
-        /* Main container */
-        .error-container {
+            min-height: 100vh; /* Prend au moins toute la hauteur de la fenêtre */
             text-align: center;
-            color: white;
-            z-index: 10;
-            position: relative;
-            max-width: 600px;
-            padding: 2rem;
+            padding: 20px;
+            background-color: #f8f9fa; /* Un fond clair pour la page 404 */
         }
-
-        /* 404 Number Animation */
-        .error-number {
-            font-size: clamp(8rem, 15vw, 12rem);
-            font-weight: 900;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d9de0, #e15554);
-            background-size: 400% 400%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientShift 3s ease-in-out infinite, bounce 2s ease-in-out infinite;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-            margin-bottom: 1rem;
-            line-height: 1;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        /* Glitch effect for subtitle */
-        .error-title {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        .error-code {
+            font-size: 8rem; /* Très grand */
             font-weight: 700;
-            margin-bottom: 1rem;
-            position: relative;
-            animation: glitch 2s linear infinite;
+            color: var(--primary-blue);
+            line-height: 1;
+            margin-bottom: 0;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.7), 4px 4px 0px rgba(0,0,0,0.1);
         }
-
-        .error-title::before,
-        .error-title::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .error-title::before {
-            animation: glitch-1 2s linear infinite;
-            color: #ff00ff;
-            z-index: -1;
-        }
-
-        .error-title::after {
-            animation: glitch-2 2s linear infinite;
-            color: #00ffff;
-            z-index: -2;
-        }
-
-        @keyframes glitch {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-        }
-
-        @keyframes glitch-1 {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(2px, -2px); }
-            40% { transform: translate(-2px, 2px); }
-            60% { transform: translate(-2px, -2px); }
-            80% { transform: translate(2px, 2px); }
-        }
-
-        @keyframes glitch-2 {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(-2px, -2px); }
-            40% { transform: translate(2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(-2px, 2px); }
-        }
-
-        /* Description text */
-        .error-description {
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
-            opacity: 0.9;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        /* Buttons container */
-        .error-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        /* Modern glass-morphism buttons */
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-primary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        /* Floating icons */
-        .floating-icons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .floating-icon {
-            position: absolute;
-            color: rgba(255, 255, 255, 0.1);
+        .error-message {
             font-size: 2rem;
-            animation: floatIcon 8s linear infinite;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .error-description {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        .error-actions .btn {
+            margin: 0 10px 10px 10px;
+            min-width: 180px; /* Pour que les boutons aient une taille similaire */
+        }
+        .error-icon { /* Optionnel: une icône illustrative */
+            font-size: 5rem;
+            color: var(--accent-yellow);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
         }
 
-        .floating-icon:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
-        .floating-icon:nth-child(2) { top: 20%; right: 10%; animation-delay: 2s; }
-        .floating-icon:nth-child(3) { bottom: 30%; left: 15%; animation-delay: 4s; }
-        .floating-icon:nth-child(4) { bottom: 10%; right: 20%; animation-delay: 6s; }
-
-        @keyframes floatIcon {
-            0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
-        /* Search bar */
-        .search-container {
-            margin: 2rem 0;
-            position: relative;
-        }
-
-        .search-bar {
-            width: 100%;
-            max-width: 400px;
-            padding: 1rem 1.5rem;
-            border: none;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: white;
-            font-size: 1rem;
-            outline: none;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .search-bar::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .search-bar:focus {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: scale(1.02);
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .error-container {
-                padding: 1rem;
-            }
-            
-            .error-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 250px;
-                justify-content: center;
-            }
-        }
-
-        /* Additional decorative elements */
-        .stars {
+        /* Si vous avez un footer, vous voudrez peut-être le masquer ou le styliser différemment ici */
+        /* Pour cet exemple, on suppose que le footer n'est pas affiché ou est minime */
+        .footer-404 {
             position: absolute;
-            top: 0;
-            left: 0;
+            bottom: 20px;
             width: 100%;
-            height: 100%;
-            z-index: 1;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .footer-404 a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+         .footer-404 a:hover {
+            text-decoration: underline;
         }
 
-        .star {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 2s infinite;
-        }
-
-        .star:nth-child(1) { width: 2px; height: 2px; top: 20%; left: 20%; animation-delay: 0s; }
-        .star:nth-child(2) { width: 3px; height: 3px; top: 30%; right: 30%; animation-delay: 1s; }
-        .star:nth-child(3) { width: 2px; height: 2px; bottom: 40%; left: 40%; animation-delay: 2s; }
-        .star:nth-child(4) { width: 3px; height: 3px; bottom: 20%; right: 20%; animation-delay: 1.5s; }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
     </style>
 </head>
 <body>
-    <!-- Animated background particles -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+    <!-- Il n'est généralement pas nécessaire d'avoir la navbar complète sur une page 404, -->
+    <!-- mais vous pouvez l'ajouter si vous le souhaitez. Pour un look plus épuré, on peut l'omettre. -->
+    <!-- Si vous l'ajoutez, assurez-vous que les liens sont corrects. -->
 
-    <!-- Floating icons -->
-    <div class="floating-icons">
-        <i class="fas fa-code floating-icon"></i>
-        <i class="fas fa-bug floating-icon"></i>
-        <i class="fas fa-exclamation-triangle floating-icon"></i>
-        <i class="fas fa-question floating-icon"></i>
-    </div>
+    <div class="page-404-wrapper">
+        <div class="container">
+            <!-- Icône optionnelle -->
+            <!-- <i class="fas fa-exclamation-triangle error-icon"></i> -->
+            <!-- Ou une autre icône comme : -->
+            <i class="fas fa-map-signs error-icon"></i>
+            <!-- <i class="far fa-compass error-icon"></i> -->
 
-    <!-- Twinkling stars -->
-    <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-    </div>
 
-    <!-- Main 404 content -->
-    <div class="error-container">
-        <div class="error-number">404</div>
-        <h1 class="error-title" data-text="Page Not Found">Page Not Found</h1>
-        <p class="error-description">
-            Oops! The page you're looking for seems to have vanished into the digital void. 
-            Don't worry, even the best explorers sometimes take a wrong turn.
-        </p>
+            <h1 class="error-code">404</h1>
+            <h2 class="error-message">Oups ! Page non trouvée.</h2>
+            <p class="error-description">
+                Désolé, la page que vous recherchez semble s'être égarée dans le vaste univers du web.
+                Peut-être que le lien est incorrect, que la page a été déplacée ou supprimée.
+            </p>
 
-        
+            <div class="error-actions">
+                <a href="/" class="btn btn-primary btn-lg">
+                    <i class="fas fa-home me-2"></i>Retour à l'Accueil
+                </a>
+                <a href="/contact" class="btn btn-outline-secondary btn-lg">
+                    <i class="fas fa-envelope me-2"></i>Nous Contacter
+                </a>
+                <!-- Optionnel: Ajouter un champ de recherche si pertinent pour votre site -->
+                <!--
+                <form action="/recherche" method="get" class="mt-4">
+                    <div class="input-group input-group-lg" style="max-width: 400px; margin: auto;">
+                        <input type="search" name="q" class="form-control" placeholder="Rechercher sur le site..." aria-label="Rechercher">
+                        <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                -->
+            </div>
 
-        <!-- Action buttons -->
-        <div class="error-actions">
-            <a href="/" class="btn btn-primary">
-                <i class="fas fa-home"></i>
-                Go Home
-            </a>
-            <!-- <a href="javascript:history.back()" class="btn btn-secondary">
-                <i class="fas fa-arrow-left"></i>
-                Go Back
-            </a>
-            <a href="/contact" class="btn btn-secondary">
-                <i class="fas fa-envelope"></i>
-                Contact Us
-            </a> -->
+            <div class="mt-5">
+                <img src="/assets/img/logo/logo1.png" alt="C5IN Logo" width="100"> <!-- Votre logo -->
+            </div>
         </div>
     </div>
 
-    <script>
-        // Add some interactive behavior
-        document.addEventListener('DOMContentLoaded', function() {
-            // Search functionality
-            const searchInput = document.getElementById('searchInput');
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    const query = this.value.trim();
-                    if (query) {
-                        // Redirect to search page or homepage with query
-                        window.location.href = `/?search=${encodeURIComponent(query)}`;
-                    }
-                }
-            });
+    <!-- Un footer minimal pour la page 404 -->
+    <div class="footer-404">
+        © <script>document.write(new Date().getFullYear())</script> C5IN. Tous droits réservés. | <a href="/">Retour au site</a>
+    </div>
 
-            // Add mouse move effect for floating particles
-            document.addEventListener('mousemove', function(e) {
-                const particles = document.querySelectorAll('.particle');
-                const mouseX = e.clientX / window.innerWidth;
-                const mouseY = e.clientY / window.innerHeight;
-
-                particles.forEach((particle, index) => {
-                    const speed = (index + 1) * 0.5;
-                    const x = mouseX * speed * 10;
-                    const y = mouseY * speed * 10;
-                    
-                    particle.style.transform = `translate(${x}px, ${y}px)`;
-                });
-            });
-
-            // Create additional random floating elements
-            function createFloatingElement() {
-                const element = document.createElement('div');
-                element.style.position = 'absolute';
-                element.style.width = Math.random() * 6 + 2 + 'px';
-                element.style.height = element.style.width;
-                element.style.background = `rgba(255, 255, 255, ${Math.random() * 0.3 + 0.1})`;
-                element.style.borderRadius = '50%';
-                element.style.left = Math.random() * 100 + '%';
-                element.style.top = '100%';
-                element.style.pointerEvents = 'none';
-                element.style.animation = `floatUp ${Math.random() * 3 + 4}s linear forwards`;
-
-                document.querySelector('.particles').appendChild(element);
-
-                // Remove element after animation
-                setTimeout(() => {
-                    element.remove();
-                }, 7000);
-            }
-
-            // Create floating elements periodically
-            setInterval(createFloatingElement, 2000);
-
-            // Add CSS for the new floating animation
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes floatUp {
-                    to {
-                        transform: translateY(-100vh);
-                        opacity: 0;
-                    }
-                }
-            `;
-            document.head.appendChild(style);
-        });
-
-        // Add parallax effect to error number
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const errorNumber = document.querySelector('.error-number');
-            if (errorNumber) {
-                errorNumber.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-    </script>
+    <!-- Pas besoin de script.js généralement, sauf si votre footer l'exige ou pour des animations complexes -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>

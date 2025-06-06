@@ -1,8 +1,13 @@
 ---
 layout: event
 title: "C5IN Kickoff Workshop: Introduction to Cloud Computing"
-date: 2025-01-15 
+date: 2025-09-15 
+plage: 15 au 16 septembre
+lang: Français et Anglais
+cibles: [Chercheurs, étudiants]
 time: "2:00 PM - 5:00 PM (WAT)"
+loc_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1990.3785671606165!2d11.500080143147636!3d3.8622094363456614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcfa23aace247%3A0xe07671abb10169f9!2s%C3%89cole%20Nationale%20Sup%C3%A9rieure%20Polytechnique%20de%20Yaound%C3%A9!5e0!3m2!1sfr!2sfr!4v1748265115918!5m2!1sfr!2sfr"
+abbrev: C5IN Workshop
 location: "Tech Hub XYZ, Douala (Online option available)" # Be specific
 type: "Workshop" # Workshop, Conference, Meetup, Hackathon, Webinar
 excerpt: "Join us for our inaugural workshop! A beginner-friendly introduction to the core concepts of cloud computing, its benefits, and key players."
