@@ -33,6 +33,11 @@ events_defaults:
   enabled: true
   image: "event-img1.png" 
 
+news_config:
+  defaults:
+    placeholder: "https://placehold.co/600x400?text="
+    image_path: "/assets/img/news/"
+
 # Build settings
 markdown: kramdown
 highlighter: rouge

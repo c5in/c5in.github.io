@@ -5,7 +5,9 @@ date: 2024-07-07 14:30:00
 excerpt : A comprehensive guide to setting up a lightweight Kubernetes cluster using K3s, deploying a "Hello-World" application, and exploring Kubernetes concepts like namespaces, deployments, services, and scaling with Horizontal Pod Autoscalers.
 tags: [Kubernetes, k3s ,beginners]
 categories: [tutorial]
-image: blog-img1.png
+image: how-it-works-k3s-revised.svg
+abbrev: K3s
+
 ---
 
 This tutorial will guide you through setting up a K3s cluster with one master node and two worker nodes, deploying a simple "Hello-World" application, and utilizing various `kubectl` commands to manage and inspect Kubernetes resources.

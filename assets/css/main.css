@@ -824,3 +824,90 @@ body {
     color: var(--primary-blue);
     margin-bottom: 8px;
 }
+
+/* Styles spécifiques à la page Actualités */
+.news-hero-section {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.85), rgba(230, 126, 34, 0.85)), url('https://via.placeholder.com/1920x500/cccccc/999999?text=Image+Actualites+C5IN') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+.news-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.news-list-card {
+    border-left: 5px solid var(--accent-red); /* Utilise la couleur d'accent pour les news */
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Pour que l'image et le contenu soient côte à côte */
+    flex-direction: column; /* Par défaut, puis row pour md et plus */
+}
+.news-list-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.news-card-img-container {
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+}
+.news-card-img {
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour l'image */
+    object-fit: cover;
+    border-top-left-radius: calc(0.375rem - 1px); /* Bootstrap card radius */
+    border-top-right-radius: calc(0.375rem - 1px);
+}
+.news-list-card .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pour que le corps de la carte prenne l'espace restant */
+}
+.news-list-card .news-date {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 8px;
+}
+.news-list-card .card-title {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.news-list-card .card-text {
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1; /* Pousse le bouton "Lire la suite" vers le bas */
+    margin-bottom: 15px;
+}
+.news-list-card .btn-read-more {
+    align-self: flex-start; /* Aligne le bouton à gauche */
+}
+
+/* Responsive pour l'image à côté du texte sur les écrans plus grands */
+@media (min-width: 768px) {
+    .news-list-card {
+        flex-direction: row;
+    }
+    .news-card-img-container {
+        width: 250px; /* Largeur de l'image sur les grands écrans */
+    }
+    .news-card-img {
+        height: 100%; /* L'image prend toute la hauteur de la carte */
+        border-top-right-radius: 0;
+        border-bottom-left-radius: calc(0.375rem - 1px);
+    }
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+.pagination .page-link {
+    color: var(--primary-blue);
+}
+.pagination .page-link:hover {
+    color: var(--secondary-blue);
+}

@@ -3,66 +3,51 @@ layout: default
 ---
 
 <!--===== HERO AREA STARTS =======-->
-<div class="inner-page-header" style="background-image: url({{ '/assets/img/bg/header-bg13.png' | relative_url }});">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 m-auto">
-                <div class="heading1 text-center">
-                    <h1>Our Blog</h1>
-                    <div class="space20"></div>
-                    <a href="{{ '/' | relative_url }}">Home <i class="fa-solid fa-angle-right"></i> <span>Our Blog</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include hero/news.hero.html %}
 <!--===== HERO AREA ENDS =======-->
 <!--===== BLOG AREA STARTS =======-->
 
-<div class="bloginner-section-area sp1">
-{% assign posts = site.posts %}
-{% if posts.size > 0 %}
-    <div class="container">
-        <div class="row">
-            {% for post in posts %}
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800">
-                
-                <div class="blog4-boxarea">
-                    <div class="img1">
-                        <img src="{{ post.image | prepend: '/assets/img/all-images/blog/' }}" alt="{{post.title}}" />
-                    </div>
-                    <div class="content-area">
-                        <ul>
-                            <li>
-                                <a href="#"><img src="{{ 'assets/img/icons/calender1.svg' | relative_url }}" alt="" /><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time> <span> | </span></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="{{ 'assets/img/icons/user1.svg' | relative_url }}" alt="" />{{post.author}}</a>
-                            </li>
-                        </ul>
-                        <div class="space20"></div>
-                        <a href="{{ post.url | relative_url }}">{{post.title}}</a>
-                        <div class="space24"></div>
-                        <a href="{{ post.url | relative_url }}" class="readmore">read more <i class="fa-solid fa-arrow-right"></i></a>
-                        <div class="arrow">
-                            <a href="{{ post.url | relative_url }}"><i class="fa-solid fa-arrow-right"></i></a>
+    <section id="news-list" class="py-5">
+        {% assign posts = site.posts %}
+        {% if posts.size > 0 %}
+        <div class="container">
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-md-12 mb-4">
+                    <div class="card news-list-card">
+                        <div class="news-card-img-container">
+                            {% if post.image %}
+                            <img src="{{ post.image | prepend: site.news_config.defaults.image_path }}" class="news-card-img" alt="{{ post.title }}">
+                            {% else %}  
+                            <img src="{{ site.news_config.defaults.placeholder }}{{post.abbrev}}" class="news-card-img" alt="Nouveau partenariat">
+                            {% endif %}
+                        </div>
+                        <div class="card-body">
+                            <p class="news-date"><i class="fas fa-calendar-alt me-1"></i> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+                            <h4 class="card-title">{{post.title}}</h4>
+                            <p class="card-text">{{post.excerpt}}</p>
+                            <a href="{{ post.url | relative_url }}" class="btn btn-outline-primary btn-sm btn-read-more">Lire la suite <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
-                
+                {% endfor %}
+
             </div>
-            {% endfor %}
 
-            
-
-
-            <div class="space30"></div>
+            <!-- Pagination -->
             {% if page.pagination.enabled %}
                 {% include pagination.html %}
             {% endif %}
-        </div>
-    </div>
 
-    {% endif %}
-</div>
+        </div>
+        {% else %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Aucune actualité disponible pour le moment.</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </section>
 <!--===== BLOG AREA ENDS =======-->
