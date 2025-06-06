@@ -1,26 +1,32 @@
 ---
 layout: default
 ---
-<article class="member-profile">
-  <header class="member-header">
-    <h1>{{ page.name }}</h1>
-    {% if page.role %}<p class="member-role"><strong>Role:</strong> {{ page.role }}</p>{% endif %}
-  </header>
 
-  {% if page.image %}
-    <img src="{{ site.baseurl }}{{ site.image_path }}{{ page.image }}" alt="{{ page.name }}" class="member-image">
-  {% endif %}
+<!-- En-tête du Profil Membre (Identique à avant) -->
+<header class="profile-header text-center">
+    <div class="container">
+        <nav aria-label="breadcrumb" class="mb-3 d-none d-md-block">
+            <ol class="breadcrumb justify-content-center" style="--bs-breadcrumb-divider-color: #cce5ff; --bs-breadcrumb-item-active-color: #fff;">
+                <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}" style="color: #e6f2ff;">Accueil</a></li>
+                <li class="breadcrumb-item"><a href="{{ '/members' | relative_url }}" style="color: #e6f2ff;">Membres</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ page.name }}</li>
+            </ol>
+        </nav>
+        {% if page.image %}
+            <img src="{{ page.image | prepend: site.members_config.defaults.image_path }}" alt="{{ page.name }}" class="profile-photo-lg mt-4">
+        {% else %}
+            <img src="{{site.members_config.defaults.placeholder}}{{ page.abreviation | default: 'Membre' }}" class="profile-photo-lg mt-4" alt="Photo de {{ page.name }}">
+        {% endif %}
+        
+        <h1 class="profile-name-lg">{{ page.name }}</h1>
+        <p class="profile-title-lg">{{ page.role }}</p>
+        <div class="profile-social-links-lg">
+           {% for social in page.socials %}
+                <a href="{{ social.url | relative_url }}" target="_blank" title="{{ social.title }}"><i class="{{ social.icon }}"></i></a>
+            {% endfor %}
 
-  {{ content }} <!-- This will be the biography -->
-
-  {% if page.linkedin or page.github or page.twitter %}
-    <div class="member-social-links">
-      <h4>Connect:</h4>
-      <ul>
-        {% if page.linkedin %}<li><a href="{{ page.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>{% endif %}
-        {% if page.github %}<li><a href="https://github.com/{{ page.github }}" target="_blank" rel="noopener noreferrer">GitHub</a></li>{% endif %}
-        {% if page.twitter %}<li><a href="https://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener noreferrer">Twitter</a></li>{% endif %}
-      </ul>
+        </div>
     </div>
-  {% endif %}
-</article>
+</header>
+
+{{ content }}

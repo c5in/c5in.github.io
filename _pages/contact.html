@@ -1,0 +1,150 @@
+---
+layout: page
+title: Contact Us
+permalink: /contact/
+---
+
+ {% include hero/contact.hero.html %}
+
+
+<!-- Section Principale de Contact -->
+    <section id="contact-main" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Colonne Informations de Contact -->
+                <div class="col-lg-5">
+                    <h2 class="section-title mb-4">Nos Coordonnées</h2>
+                    <p class="mb-4">N'hésitez pas à nous joindre directement ou à nous rendre visite. Retrouvez-nous également sur les réseaux sociaux.</p>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-info-content">
+                            <h5>Notre Adresse</h5>
+                            <p>Campus Universitaire de Ngoa-Ekellé<br>BP 812, Yaoundé, Cameroun</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-info-content">
+                            <h5>Email</h5>
+                            <p><a href="mailto:contact@c5in.org">contact@c5in.org</a></p>
+                            <p><a href="mailto:support@c5in.org">support@c5in.org</a> (Support technique)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-info-content">
+                            <h5>Téléphone</h5>
+                            <p><a href="tel:+237123456789">+237 123 456 789</a></p>
+                            <p><a href="tel:+237987654321">+237 987 654 321</a> (Secrétariat)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-info-content">
+                            <h5>Horaires d'ouverture</h5>
+                            <p>Lundi - Vendredi : 08h00 - 17h00</p>
+                            <p>Samedi - Dimanche : Fermé</p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4 mb-3" style="color:var(--text-dark);">Suivez-nous :</h5>
+                    {% include partials/socials.html %}
+                </div>
+
+                <!-- Colonne Formulaire de Contact -->
+                <div class="col-lg-7">
+                    <h2 class="section-title mb-4">Envoyez-Nous un Message</h2>
+                    <p class="mb-4">Utilisez le formulaire ci-dessous pour toute demande d'information, proposition de collaboration ou autre. Nous vous répondrons dans les plus brefs délais.</p>
+                    <form action="https://formspree.io/f/xanjnvkq" method="POST" class="contact-form needs-validation" novalidate>
+                        <!-- Remplacer "traitement_formulaire.php" par votre script de traitement côté serveur -->
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="contactNom" class="form-label">Nom complet <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="contactNom" name="nom" required>
+                                <div class="invalid-feedback">
+                                    Veuillez entrer votre nom.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contactEmail" class="form-label">Adresse Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="contactEmail" name="email" required>
+                                 <div class="invalid-feedback">
+                                    Veuillez entrer une adresse email valide.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="contactSujet" class="form-label">Sujet <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="contactSujet" name="subject" required>
+                                <div class="invalid-feedback">
+                                    Veuillez entrer un sujet.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="contactMessage" class="form-label">Votre Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="contactMessage" name="message" rows="6" required></textarea>
+                                <div class="invalid-feedback">
+                                    Veuillez entrer votre message.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="consentRGPD" name="consent_rgpd" required>
+                                    <label class="form-check-label" for="consentRGPD">
+                                        J'accepte que mes données soient stockées et utilisées pour me recontacter. <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Vous devez accepter les conditions.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane me-2"></i>Envoyer le Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Carte Google Maps -->
+    <section id="map-section" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="section-title">Où Nous Trouver ?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="map-container">
+                        <!-- Remplacez ceci par votre code d'intégration Google Maps -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.7937798365113!2d11.500201614760007!3d3.856903897266103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf7da931d871%3A0x959e0a014a9a6f14!2sUniversit%C3%A9%20de%20Yaound%C3%A9%20I!5e0!3m2!1sfr!2scm!4v1678886543210!5m2!1sfr!2scm"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Script de validation pour le formulaire Bootstrap
+        (function () {
+          'use strict'
+          var forms = document.querySelectorAll('.needs-validation')
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+              }, false)
+            })
+        })()
+    </script>

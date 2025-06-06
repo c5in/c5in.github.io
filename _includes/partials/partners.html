@@ -1,0 +1,12 @@
+
+<!-- Horizontal Scrollable Row for Partners -->
+<div class="horizontal-scroll-wrapper">
+    <div class="horizontal-scroll-content partner-scroll-content">
+        {% for brand in site.data.partners %}
+        <div class="partner-logo-scrollable text-center fade-in">
+            <img src="{{ brand.image | prepend: '/assets/img/partners/' }}" alt="{{ brand.name }}">
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>

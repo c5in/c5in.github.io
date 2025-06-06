@@ -1,12 +1,12 @@
-- name: Home
+- name: Accueil
   link: /
-- name: About Us
+- name: À propos
   link: /about/
-- name: Blog
+- name: Actualités
   link: /blog/
-- name: Events
+- name: Événements
   link: /events/
-- name: Members
+- name: Membres
   link: /members/ # Link to the listing page
 # - name: Publications
 #   link: /publications/ # Link to the listing page

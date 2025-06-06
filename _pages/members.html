@@ -1,0 +1,50 @@
+---
+layout: default
+title: Nos membres 
+description: "Meet the diverse and talented individuals and organizations that form the C5IN community."
+collection_name: members # This tells the layout which collection to iterate over
+permalink: /members/
+---
+
+ <!-- Hero Section pour "Membres" -->
+{% include hero/members.hero.html %}
+
+<!-- Section Liste des Membres -->
+    <section id="members-list" class="py-5">
+        <div class="container">
+            <!-- Vous pouvez organiser les membres par catégorie si besoin, ex: Permanents, Associés, Étudiants -->
+            <h2 class="section-subtitle">Membres Permanents</h2>
+            <p class="section-description">Le cœur de notre expertise, dédié à la recherche et à l'encadrement.</p>
+            <div class="row g-4">
+                {% include partials/team.html %}
+                <!-- Ajoutez plus de membres ici -->
+            </div>
+
+            <!-- Si vous avez d'autres catégories de membres -->
+            <!--
+            <h2 class="section-subtitle mt-5">Membres Associés</h2>
+            <p class="section-description">Collaborateurs externes et experts contribuant à nos projets.</p>
+            <div class="row g-4">
+                 ... cartes des membres associés ...
+            </div>
+
+            <h2 class="section-subtitle mt-5">Nos Étudiants Chercheurs</h2>
+            <p class="section-description">La prochaine génération d'innovateurs que nous formons.</p>
+            <div class="row g-4">
+                 ... cartes des étudiants ...
+            </div>
+            -->
+
+            <!-- Option de Pagination (si nécessaire, à gérer manuellement comme pour les actualités/événements) -->
+            <!--
+            <nav aria-label="Page navigation membres" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Précédent</a></li>
+                    <li class="page-item active"><a class="page-link" href="membres.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="membres-page-2.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="membres-page-2.html">Suivant</a></li>
+                </ul>
+            </nav>
+            -->
+        </div>
+    </section>

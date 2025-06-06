@@ -1,0 +1,18 @@
+{% assign permanent_members = site.members | where: "type", "permanent" %}
+
+
+{% for member in permanent_members %}
+    <div class="member-card-scrollable text-center fade-in">
+        {% if member.image %}
+            <img src="{{ member.image | prepend: site.members_config.defaults.image_path }}" class="member-photo" alt="{{ member.name }}">
+        {% else %}
+            <img src="{{ site.members_config.defaults.placeholder }}{{ member.abreviation }}" class="member-photo" alt="{{ member.name }}">
+        {% endif %}
+        
+        <div class="card-body">
+            <h5 class="card-title">{{ member.name }}</h5>
+            <p class="card-text text-muted">{{ member.role }}</p>
+                <a href="{{ member.url | relative_url }}" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
+        </div>
+    </div>
+{% endfor %}

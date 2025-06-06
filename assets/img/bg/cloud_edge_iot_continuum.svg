@@ -1,0 +1,188 @@
+<svg width="500" height="350" viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Cloud gradient -->
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Edge gradient -->
+    <linearGradient id="edgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- IoT gradient -->
+    <linearGradient id="iotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Connection lines animation -->
+    <style>
+      .connection-line {
+        stroke-dasharray: 5,5;
+        animation: dash 2s linear infinite;
+      }
+      @keyframes dash {
+        to {
+          stroke-dashoffset: -10;
+        }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="350" fill="url(#bgGradient)"/>
+  
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">
+    Continuum Cloud-Edge-IoT
+  </text>
+  
+  <!-- Cloud Layer -->
+  <g id="cloud-layer">
+    <!-- Cloud shape -->
+    <path d="M80 60 Q60 40 90 40 Q110 20 140 40 Q170 35 170 55 Q180 45 190 55 Q200 40 220 50 Q240 35 240 55 Q250 45 260 55 Q270 50 280 60 L280 100 L80 100 Z" 
+          fill="url(#cloudGradient)" stroke="#1e40af" stroke-width="2"/>
+    
+    <!-- Cloud servers -->
+    <rect x="120" y="70" width="12" height="20" fill="white" rx="2"/>
+    <rect x="140" y="70" width="12" height="20" fill="white" rx="2"/>
+    <rect x="160" y="70" width="12" height="20" fill="white" rx="2"/>
+    <rect x="180" y="70" width="12" height="20" fill="white" rx="2"/>
+    <rect x="200" y="70" width="12" height="20" fill="white" rx="2"/>
+    <rect x="220" y="70" width="12" height="20" fill="white" rx="2"/>
+    
+    <!-- Cloud label -->
+    <text x="180" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">
+      CLOUD
+    </text>
+    <text x="180" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      Traitement centralisé
+    </text>
+  </g>
+  
+  <!-- Edge Layer -->
+  <g id="edge-layer">
+    <!-- Edge nodes -->
+    <rect x="100" y="170" width="40" height="30" fill="url(#edgeGradient)" rx="5" stroke="#059669" stroke-width="2"/>
+    <rect x="160" y="170" width="40" height="30" fill="url(#edgeGradient)" rx="5" stroke="#059669" stroke-width="2"/>
+    <rect x="220" y="170" width="40" height="30" fill="url(#edgeGradient)" rx="5" stroke="#059669" stroke-width="2"/>
+    <rect x="280" y="170" width="40" height="30" fill="url(#edgeGradient)" rx="5" stroke="#059669" stroke-width="2"/>
+    
+    <!-- Edge processors -->
+    <rect x="105" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="115" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="127" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="105" y="185" width="8" height="8" fill="white" rx="1"/>
+    <rect x="115" y="185" width="8" height="8" fill="white" rx="1"/>
+    <rect x="127" y="185" width="8" height="8" fill="white" rx="1"/>
+    
+    <rect x="165" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="175" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="187" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="165" y="185" width="8" height="8" fill="white" rx="1"/>
+    <rect x="175" y="185" width="8" height="8" fill="white" rx="1"/>
+    <rect x="187" y="185" width="8" height="8" fill="white" rx="1"/>
+    
+    <rect x="225" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="235" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="247" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="225" y="185" width="8" height="8" fill="white" rx="1"/>
+    <rect x="235" y="185" width="8" height="8" fill="white" rx="1"/>
+    <rect x="247" y="185" width="8" height="8" fill="white" rx="1"/>
+    
+    <rect x="285" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="295" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="307" y="175" width="8" height="8" fill="white" rx="1"/>
+    <rect x="285" y="185" width="8" height="8" fill="white" rx="1"/>
+    <rect x="295" y="185" width="8" height="8" fill="white" rx="1"/>
+    <rect x="307" y="185" width="8" height="8" fill="white" rx="1"/>
+    
+    <!-- Edge label -->
+    <text x="210" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#059669">
+      EDGE
+    </text>
+    <text x="210" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      Traitement local et Cache
+    </text>
+  </g>
+  
+  <!-- IoT Layer -->
+  <g id="iot-layer">
+    <!-- IoT devices -->
+    <circle cx="80" cy="280" r="12" fill="url(#iotGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="120" cy="290" r="12" fill="url(#iotGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="160" cy="285" r="12" fill="url(#iotGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="200" cy="295" r="12" fill="url(#iotGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="240" cy="280" r="12" fill="url(#iotGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="280" cy="290" r="12" fill="url(#iotGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="320" cy="285" r="12" fill="url(#iotGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="360" cy="275" r="12" fill="url(#iotGradient)" stroke="#d97706" stroke-width="2"/>
+    
+    <!-- IoT device icons (sensors) -->
+    <circle cx="80" cy="280" r="4" fill="white"/>
+    <circle cx="120" cy="290" r="4" fill="white"/>
+    <circle cx="160" cy="285" r="4" fill="white"/>
+    <circle cx="200" cy="295" r="4" fill="white"/>
+    <circle cx="240" cy="280" r="4" fill="white"/>
+    <circle cx="280" cy="290" r="4" fill="white"/>
+    <circle cx="320" cy="285" r="4" fill="white"/>
+    <circle cx="360" cy="275" r="4" fill="white"/>
+    
+    <!-- IoT label -->
+    <text x="220" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d97706">
+      IoT DEVICES
+    </text>
+    <text x="220" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      Capteurs et Actuateurs
+    </text>
+  </g>
+  
+  <!-- Connection lines Cloud to Edge -->
+  <line x1="150" y1="100" x2="120" y2="170" stroke="#64748b" stroke-width="2" class="connection-line"/>
+  <line x1="180" y1="100" x2="180" y2="170" stroke="#64748b" stroke-width="2" class="connection-line"/>
+  <line x1="210" y1="100" x2="240" y2="170" stroke="#64748b" stroke-width="2" class="connection-line"/>
+  <line x1="240" y1="100" x2="300" y2="170" stroke="#64748b" stroke-width="2" class="connection-line"/>
+  
+  <!-- Connection lines Edge to IoT -->
+  <line x1="110" y1="200" x2="90" y2="270" stroke="#64748b" stroke-width="1" class="connection-line"/>
+  <line x1="120" y1="200" x2="120" y2="278" stroke="#64748b" stroke-width="1" class="connection-line"/>
+  <line x1="170" y1="200" x2="160" y2="273" stroke="#64748b" stroke-width="1" class="connection-line"/>
+  <line x1="190" y1="200" x2="200" y2="283" stroke="#64748b" stroke-width="1" class="connection-line"/>
+  <line x1="230" y1="200" x2="240" y2="268" stroke="#64748b" stroke-width="1" class="connection-line"/>
+  <line x1="250" y1="200" x2="280" y2="278" stroke="#64748b" stroke-width="1" class="connection-line"/>
+  <line x1="290" y1="200" x2="320" y2="273" stroke="#64748b" stroke-width="1" class="connection-line"/>
+  <line x1="310" y1="200" x2="360" y2="263" stroke="#64748b" stroke-width="1" class="connection-line"/>
+  
+  <!-- Data flow arrows -->
+  <g id="data-flow">
+    <!-- Upward arrow (data to cloud) -->
+    <path d="M400 280 L400 180 L395 185 M400 180 L405 185" stroke="#ef4444" stroke-width="2" fill="none"/>
+    <text x="415" y="230" font-family="Arial, sans-serif" font-size="10" fill="#ef4444">
+      Data
+    </text>
+    
+    <!-- Downward arrow (commands/responses) -->
+    <path d="M430 180 L430 280 L425 275 M430 280 L435 275" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+    <text x="445" y="230" font-family="Arial, sans-serif" font-size="10" fill="#8b5cf6">
+      Control
+    </text>
+  </g>
+  
+  <!-- Latency indicators -->
+  <text x="50" y="140" font-family="Arial, sans-serif" font-size="9" fill="#64748b">
+    Haute latence
+  </text>
+  <text x="50" y="240" font-family="Arial, sans-serif" font-size="9" fill="#64748b">
+    Faible latence
+  </text>
+  
+</svg>

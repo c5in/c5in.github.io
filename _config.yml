@@ -24,6 +24,10 @@ testimonials:
   enabled: true
   limit: 6
 
+members_config:
+  defaults:
+    placeholder: "https://placehold.co/150x150/1e5099/FFFFFF?text="
+    image_path: "/assets/img/members/"
 # Events
 events_defaults:
   enabled: true

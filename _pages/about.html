@@ -1,37 +1,203 @@
 ---
 layout: default
-title: About C5IN
+title: À propos
 permalink: /about/
 ---
 
-<!--===== HERO AREA STARTS =======-->
-<div class="inner-page-header" style="background-image: url('/assets/img/bg/header-bg5.png');">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 m-auto">
-                <div class="heading1 text-center">
-                    <h1>About C5IN</h1>
-                    <div class="space20"></div>
-                    <a href="{{ '/' | relative_url }}">Home <i class="fa-solid fa-angle-right"></i> <span>About Us</span></a>
+{% include hero/about.hero.html %}
+<!-- Section: Qui Sommes-Nous -->
+    <section id="qui-sommes-nous" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in">
+                    <h2 class="section-title">Qui Sommes-Nous ?</h2>
+                    <p>Le <strong>C5IN (Cameroon Cloud-Edge-IoT Innovation Network)</strong> est une initiative collaborative lancée en 2025, dédiée à la promotion et au développement de la recherche, de l'innovation et de la formation dans le domaine des systèmes distribués, couvrant l'ensemble du continuum Cloud, Edge Computing et Internet des Objets (IoT) au Cameroun.</p>
+                    <p>Nous rassemblons des chercheurs, des universitaires, des professionnels de l'industrie et des étudiants pour créer un écosystème dynamique favorisant l'excellence scientifique, le transfert de technologie et l'impact socio-économique.</p>
+                    <a href="{{ '/contact' | relative_url }}" class="btn btn-primary mt-3"><i class="fas fa-envelope me-2"></i>Rejoignez-Nous</a>
+                </div>
+                <div class="col-lg-6 text-center fade-in" data-wow-delay="0.3s">
+                    <img src="{{ '/assets/img/bg/cloud_edge_iot_continuum.svg' | relative_url }}" alt="Collaboration C5IN" class="img-fluid rounded shadow-lg">
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!--===== HERO AREA ENDS =======-->
+    </section>
 
-{% include partials/about-section.html %}
+    <!-- Section: Notre Vision & Mission -->
+    <section id="vision-mission" class="py-5 bg-light-alt"> <!-- Changement optionnel de bg-light pour une variation -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="vision-mission-item">
+                        <div class="vm-icon-wrapper">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="vm-title">Notre Vision</h3>
+                        <p class="vm-text">Devenir un centre d'excellence de renommée internationale pour la recherche et l'innovation en Cloud-Edge-IoT, contribuant significativement à la transformation numérique du Cameroun et de l'Afrique, et formant la prochaine génération d'experts dans ces domaines stratégiques.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="vision-mission-item">
+                        <div class="vm-icon-wrapper">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="vm-title">Notre Mission</h3>
+                        <ul class="vm-list list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-alt me-2"></i> Mener des recherches de pointe et innovantes.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-alt me-2"></i> Favoriser la collaboration entre le monde académique et l'industrie.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-alt me-2"></i> Développer des compétences et former des talents locaux.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-alt me-2"></i> Contribuer au développement de solutions technologiques adaptées aux contextes locaux et régionaux.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary-alt me-2"></i> Diffuser les connaissances et sensibiliser aux enjeux du numérique.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-{% include partials/research-area.html %}
+    <!-- Section: Ce Que Nous Faisons / Nos Domaines d'Activité -->
+    <section id="nos-activites" class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Nos Domaines d'Activité</h2>
+                    <p class="lead">Nous concentrons nos efforts sur plusieurs piliers stratégiques.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card h-100 text-center service-card">
+                        <div class="card-body p-4">
+                            <div class="icon-box icon-research mx-auto mb-3">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h5 class="card-title">Recherche Fondamentale et Appliquée</h5>
+                            <p class="card-text">Exploration de nouvelles architectures, algorithmes et protocoles pour les systèmes Cloud, Edge et IoT.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in" data-wow-delay="0.1s">
+                    <div class="card h-100 text-center service-card">
+                        <div class="card-body p-4">
+                            <div class="icon-box icon-events mx-auto mb-3">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h5 class="card-title">Formation et Renforcement des Capacités</h5>
+                            <p class="card-text">Organisation d'écoles d'été, de workshops, de séminaires et de programmes de formation continue.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in" data-wow-delay="0.2s">
+                    <div class="card h-100 text-center service-card">
+                        <div class="card-body p-4">
+                            <div class="icon-box icon-news mx-auto mb-3">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h5 class="card-title">Innovation et Transfert Technologique</h5>
+                            <p class="card-text">Développement de prototypes, de solutions proof-of-concept et accompagnement à la valorisation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in" data-wow-delay="0.3s">
+                     <div class="card h-100 text-center service-card">
+                        <div class="card-body p-4">
+                            <div class="icon-box" style="background: rgba(142, 68, 173, 0.1); color: #8e44ad;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h5 class="card-title">Animation de Communauté</h5>
+                            <p class="card-text">Création d'un réseau actif de chercheurs, d'étudiants et de professionnels à travers des événements et plateformes d'échange.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in" data-wow-delay="0.4s">
+                     <div class="card h-100 text-center service-card">
+                        <div class="card-body p-4">
+                            <div class="icon-box" style="background: rgba(44, 62, 80, 0.1); color: #2c3e50;">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h5 class="card-title">Partenariats Stratégiques</h5>
+                            <p class="card-text">Collaboration avec des universités, des centres de recherche, des entreprises et des institutions publiques.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in" data-wow-delay="0.5s">
+                     <div class="card h-100 text-center service-card">
+                        <div class="card-body p-4">
+                           <div class="icon-box" style="background: rgba(243, 156, 18, 0.1); color: #f39c12;">
+                                <i class="fas fa-globe-africa"></i>
+                            </div>
+                            <h5 class="card-title">Veille et Prospective</h5>
+                            <p class="card-text">Suivi des tendances technologiques et des politiques d'innovation pour orienter nos actions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-{% include partials/activities.html %}
+    <!-- Section: Notre Histoire (Timeline - Optionnel) -->
+    <section id="notre-histoire" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Notre Parcours</h2>
+                    <p class="lead">Quelques étapes clés de notre développement.</p>
+                </div>
+            </div>
+            <ul class="timeline">
+                <li class="fade-in">
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2025 - Fondation de C5IN</h4>
+                            <p><small class="text-muted"><i class="fas fa-calendar-alt"></i> Année de lancement</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Lancement officiel de l'initiative C5IN avec pour objectif de structurer la recherche en systèmes distribués au Cameroun.</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- <li class="timeline-inverted fade-in" data-wow-delay="0.1s"> 
+                     <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2021 - Premiers Projets et Collaborations</h4>
+                             <p><small class="text-muted"><i class="fas fa-calendar-alt"></i> Étape majeure</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Démarrage des premiers projets de recherche collaboratifs et signature de partenariats avec des institutions académiques locales.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="fade-in" data-wow-delay="0.2s">
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2023 - Organisation de la Première Conférence C5IN</h4>
+                            <p><small class="text-muted"><i class="fas fa-calendar-alt"></i> Événement phare</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Succès de la première conférence internationale C5IN, rassemblant des experts du monde entier.</p>
+                        </div>
+                    </div>
+                </li> -->
+                 <li class="timeline-inverted fade-in" data-wow-delay="0.3s">
+                     <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Aujourd'hui et Demain</h4>
+                             <p><small class="text-muted"><i class="fas fa-calendar-alt"></i> Perspective</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Poursuite de notre croissance, expansion de nos activités de formation, et renforcement de notre impact sur l'écosystème numérique.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-
-
-<!--===== PARTNERS AREA STARTS =======-->
-{% include partials/our-partners.html %}
-<!--===== PARTNERS AREA ENDS =======-->
-
-<!--===== CTA AREA STARTS =======-->
-{% include partials/priorevent.html %}
-<!--===== CTA AREA ENDS =======-->
+    <!-- Section: Lien vers l'Équipe (si sur la page d'accueil) -->
+    <section class="py-5 team-link-section text-center">
+        <div class="container">
+            <h3 class="mb-3 fade-in">Découvrez Notre Équipe Dévouée</h3>
+            <p class="lead mb-4 fade-in" data-wow-delay="0.1s">Les personnes qui animent C5IN et portent notre vision.</p>
+            <a href="{{ '/members' | relative_url }}" class="btn btn-lg btn-outline-light fade-in" data-wow-delay="0.2s"><i class="fas fa-users me-2"></i>Voir Nos Membres Permanents</a>
+            <!-- Si vous avez une page dédiée aux membres: <a href="equipe.html" ...>Voir Notre Équipe</a> -->
+        </div>
+    </section>

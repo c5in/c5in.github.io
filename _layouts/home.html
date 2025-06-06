@@ -276,52 +276,8 @@ layout: default
             <!-- Horizontal Scrollable Row for Members -->
             <div class="horizontal-scroll-wrapper">
                 <div class="horizontal-scroll-content">
-                    <!-- Membre 1 -->
-                    <div class="member-card-scrollable text-center fade-in">
-                        <img src="/assets/img/members/menra.jpg" class="member-photo" alt="Menra">
-                        <div class="card-body">
-                            <h5 class="card-title">Dr. Nom Prénom</h5>
-                            <p class="card-text text-muted">Directeur de Recherche</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
-                        </div>
-                    </div>
-                    <!-- Membre 2 -->
-                    <div class="member-card-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150/3498db/FFFFFF?text=Photo" class="member-photo" alt="Nom du Membre">
-                        <div class="card-body">
-                            <h5 class="card-title">Prof. Autre Nom</h5>
-                            <p class="card-text text-muted">Chercheur Principal IoT</p>
-                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
-                        </div>
-                    </div>
-                    <!-- Membre 3 -->
-                    <div class="member-card-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150/f1c40f/2c3e50?text=Photo" class="member-photo" alt="Nom du Membre">
-                        <div class="card-body">
-                            <h5 class="card-title">Mme. Expert Nom</h5>
-                            <p class="card-text text-muted">Spécialiste Edge Computing</p>
-                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
-                        </div>
-                    </div>
-                    <!-- Membre 4 -->
-                    <div class="member-card-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150/27ae60/FFFFFF?text=Photo" class="member-photo" alt="Nom du Membre">
-                        <div class="card-body">
-                            <h5 class="card-title">Mr. Tech Lead</h5>
-                            <p class="card-text text-muted">Ingénieur Cloud</p>
-                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
-                        </div>
-                    </div>
-                    <!-- Membre 5 -->
-                    <div class="member-card-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150/e74c3c/FFFFFF?text=Photo" class="member-photo" alt="Nom du Membre">
-                        <div class="card-body">
-                            <h5 class="card-title">Dr. Alpha Beta</h5>
-                            <p class="card-text text-muted">Chercheur Senior</p>
-                             <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link me-1"></i> Profil</a>
-                        </div>
-                    </div>
-                    <!-- Ajoutez plus de membres ici pour voir l'effet de défilement -->
+                    {% include partials/permanent-members.html %}
+                    
                 </div>
             </div>
         </div>
@@ -336,43 +292,6 @@ layout: default
                     <p class="lead">Organisations et institutions qui soutiennent notre mission et collaborent avec nous.</p>
                 </div>
             </div>
-            <!-- Horizontal Scrollable Row for Partners -->
-            <div class="horizontal-scroll-wrapper">
-                <div class="horizontal-scroll-content partner-scroll-content">
-                    <!-- Partenaire 1 -->
-                    <div class="partner-logo-scrollable text-center fade-in">
-                        <img src="/assets/img/partners/enspy.jpg" alt="Logo Partenaire 1">
-                    </div>
-                    <!-- Partenaire 2 -->
-                    <div class="partner-logo-scrollable text-center fade-in">
-                        <img src="/assets/img/partners/enspd.jpg" alt="Logo Partenaire 2">
-                    </div>
-                    <!-- Partenaire 3 -->
-                    <div class="partner-logo-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150x80/CCCCCC/777777?text=Logo+Partenaire+3" alt="Logo Partenaire 3">
-                    </div>
-                    <!-- Partenaire 4 -->
-                    <div class="partner-logo-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150x80/BBBBBB/666666?text=Logo+Partenaire+4" alt="Logo Partenaire 4">
-                    </div>
-                    <!-- Partenaire 5 -->
-                    <div class="partner-logo-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150x80/AAAAAA/555555?text=Logo+Partenaire+5" alt="Logo Partenaire 5">
-                    </div>
-                    <!-- Partenaire 6 -->
-                    <div class="partner-logo-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150x80/999999/444444?text=Logo+Partenaire+6" alt="Logo Partenaire 6">
-                    </div>
-                    <!-- Partenaire 7 -->
-                    <div class="partner-logo-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150x80/888888/333333?text=Logo+Partenaire+7" alt="Logo Partenaire 7">
-                    </div>
-                     <!-- Partenaire 8 -->
-                    <div class="partner-logo-scrollable text-center fade-in">
-                        <img src="https://via.placeholder.com/150x80/777777/222222?text=Logo+Partenaire+8" alt="Logo Partenaire 8">
-                    </div>
-                    <!-- Ajoutez plus de partenaires ici pour voir l'effet de défilement -->
-                </div>
-            </div>
+            {% include partials/partners.html %}
         </div>
     </section>

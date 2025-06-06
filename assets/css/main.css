@@ -11,7 +11,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
-    background-image: url('assets/img/bg/particles.png'); /* Assurez-vous que ce chemin est correct */
+    background-image: url('/assets/img/bg/particles.png'); /* Assurez-vous que ce chemin est correct */
     background-repeat: repeat;
 }
 
@@ -450,58 +450,377 @@ body {
 
 
  /* Styles spécifiques à la page Événements si besoin */
-        .events-hero-section {
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.85), rgba(46, 204, 113, 0.85)), url('https://via.placeholder.com/1920x500/cccccc/999999?text=Image+Evenements+C5IN') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        .events-hero-section h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-        /* Style pour les cartes d'événements (peut réutiliser .event-card de votre style.css) */
-        .event-list-card {
-            border-left: 5px solid var(--accent-green);
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .event-list-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-        .event-list-card .card-body {
-            padding: 25px;
-        }
-        .event-list-card .event-date {
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 5px;
-        }
-        .event-list-card .card-title {
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-        .event-list-card .event-location {
-            color: #777;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-        .pagination .page-item.active .page-link {
-            background-color: var(--primary-blue);
-            border-color: var(--primary-blue);
-        }
-        .pagination .page-link {
-            color: var(--primary-blue);
-        }
-        .pagination .page-link:hover {
-            color: var(--secondary-blue);
-        }
-        .pagination .page-item.disabled .page-link {
-            color: #6c757d;
-            pointer-events: none;
-            background-color: #fff;
-            border-color: #dee2e6;
-        }
+.events-hero-section {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.85), rgba(46, 204, 113, 0.85)), url('https://via.placeholder.com/1920x500/cccccc/999999?text=Image+Evenements+C5IN') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+.events-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+/* Style pour les cartes d'événements (peut réutiliser .event-card de votre style.css) */
+.event-list-card {
+    border-left: 5px solid var(--accent-green);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-list-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.event-list-card .card-body {
+    padding: 25px;
+}
+.event-list-card .event-date {
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+.event-list-card .card-title {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+.event-list-card .event-location {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+.pagination .page-link {
+    color: var(--primary-blue);
+}
+.pagination .page-link:hover {
+    color: var(--secondary-blue);
+}
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+/* Styles spécifiques à la page "À Propos" si nécessaire */
+.about-hero-section {
+    background: linear-gradient(135deg, rgba(30, 80, 153, 0.85), rgba(52, 152, 219, 0.85)), url('https://via.placeholder.com/1920x600/cccccc/999999?text=Image+de+Fond+Technologique') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+.about-hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.about-hero-section p.lead {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 0;
+}
+.timeline:before {
+    content: ' ';
+    background: var(--secondary-blue);
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+.timeline > li {
+    margin: 20px 0;
+    padding-left: 60px; /* Espace pour l'icône et la ligne */
+}
+.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-blue);
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+    margin-top: 3px; /* Alignement vertical avec le texte */
+}
+.timeline > li .timeline-panel {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.timeline > li .timeline-heading h4 {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+.team-link-section {
+    background-color: var(--primary-blue);
+    color: white;
+}
+.team-link-section h3 {
+    color: var(--accent-yellow);
+}
+
+
+/* Styles spécifiques à la page Membres */
+.members-hero-section {
+    background: linear-gradient(135deg, rgba(30, 80, 153, 0.85), rgba(52, 152, 219, 0.85)), url('https://placehold.co/1920x500/cccccc/999999?text=Equipe+C5IN') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+.members-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.member-profile-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Pour que les cartes aient la même hauteur */
+    display: flex;
+    flex-direction: column;
+}
+.member-profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(30, 80, 153, 0.15);
+}
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 5px solid var(--secondary-blue); /* Couleur de bordure pour la photo */
+    padding: 4px; /* Espace entre la bordure et la photo si background différent */
+    background-color: white; /* Pour que le padding soit visible */
+}
+.member-profile-card .member-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+.member-profile-card .member-title {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+.member-profile-card .member-bio {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pousse les liens sociaux vers le bas */
+}
+.member-social-links a {
+    color: var(--primary-blue);
+    margin: 0 8px;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+.member-social-links a:hover {
+    color: var(--secondary-blue);
+}
+.section-subtitle { /* Pour les sous-titres de section comme "Membres Permanents" */
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+    .section-description { /* Pour la description sous le sous-titre */
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Styles spécifiques à la page de profil membre */
+.profile-header {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+.profile-photo-lg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+.profile-name-lg {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.profile-title-lg {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.profile-social-links-lg a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.8rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.profile-social-links-lg a:hover {
+    opacity: 1;
+}
+.profile-section-title {
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-yellow);
+    display: inline-block;
+}
+.profile-content p, .profile-content li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+}
+.profile-content ul {
+    padding-left: 20px;
+    list-style: disc; /* Ou autre style de puce */
+}
+/* Styles pour la sidebar unique */
+        /* Styles pour la nouvelle sidebar unifiée */
+.profile-sidebar-card {
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    /* sticky-top nécessite un offset 'top' pour ne pas coller sous la navbar fixe */
+    /* La valeur de top doit correspondre à la hauteur de votre navbar fixe + un peu de marge */
+}
+.profile-sidebar-card .card-header {
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem; /* Un peu plus grand pour le titre de la sidebar */
+}
+.profile-sidebar-card .card-body {
+    padding: 20px;
+}
+
+.sidebar-section-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-top: 10px; /* Espace avant le premier heading */
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+.profile-sidebar-card .card-body > div:first-child .sidebar-section-heading {
+        margin-top: 0; /* Pas de marge en haut pour le tout premier heading */
+}
+
+
+/* Les styles .profile-contact-info .contact-item peuvent rester les mêmes */
+.profile-contact-info .contact-item {
+    display: flex;
+    align-items: center; /* Changé pour un meilleur alignement vertical si le texte est sur plusieurs lignes */
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.profile-contact-info .contact-item i {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    width: 25px; /* Pour alignement */
+    text-align: center;
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+}
+.profile-contact-info .contact-item div {
+    flex-grow: 1;
+}
+.profile-contact-info .contact-item a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+.profile-contact-info .contact-item a:hover {
+    color: var(--secondary-blue);
+    text-decoration: underline;
+}
+
+/* Styles pour les listes dans la sidebar (Formation, Enseignements) */
+.profile-education ul, .profile-teaching ul {
+    padding-left: 5px; /* Moins de padding pour une liste simple */
+    font-size: 0.95rem;
+}
+.profile-education ul li, .profile-teaching ul li {
+    margin-bottom: 8px;
+}
+.profile-education ul li strong, .profile-teaching ul li strong {
+    display: block; /* Pour que le titre du diplôme/cours soit sur sa propre ligne */
+    color: var(--text-dark);
+}
+    .profile-education ul li em {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.publication-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+.publication-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.publication-title {
+    font-weight: 600;
+    color: var(--text-dark);
+    display: block; /* Pour prendre toute la largeur */
+    margin-bottom: 5px;
+}
+.publication-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+.project-card {
+    border: 1px solid #e9ecef;
+    border-left: 4px solid var(--accent-green);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fdfdfd;
+}
+.project-card h5 {
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
