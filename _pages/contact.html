@@ -63,36 +63,36 @@ permalink: /contact/
                         <!-- Remplacer "traitement_formulaire.php" par votre script de traitement côté serveur -->
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label for="contactNom" class="form-label">Nom complet <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="contactNom" name="nom" required>
+                                <label for="contactNom" class="form-label " >Nom complet <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="contactNom" name="nom" required disabled>
                                 <div class="invalid-feedback">
                                     Veuillez entrer votre nom.
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label for="contactEmail" class="form-label">Adresse Email <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control" id="contactEmail" name="email" required>
+                                <input type="email" class="form-control" id="contactEmail" name="email" required disabled>
                                  <div class="invalid-feedback">
                                     Veuillez entrer une adresse email valide.
                                 </div>
                             </div>
                             <div class="col-12">
                                 <label for="contactSujet" class="form-label">Sujet <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="contactSujet" name="subject" required>
+                                <input type="text" class="form-control" id="contactSujet" name="subject" required disabled>
                                 <div class="invalid-feedback">
                                     Veuillez entrer un sujet.
                                 </div>
                             </div>
                             <div class="col-12">
                                 <label for="contactMessage" class="form-label">Votre Message <span class="text-danger">*</span></label>
-                                <textarea class="form-control" id="contactMessage" name="message" rows="6" required></textarea>
+                                <textarea class="form-control" id="contactMessage" name="message" rows="6" required disabled></textarea>
                                 <div class="invalid-feedback">
                                     Veuillez entrer votre message.
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="consentRGPD" name="consent_rgpd" required>
+                                    <input class="form-check-input" type="checkbox" value="" id="consentRGPD" name="consent_rgpd" required disabled>
                                     <label class="form-check-label" for="consentRGPD">
                                         J'accepte que mes données soient stockées et utilisées pour me recontacter. <span class="text-danger">*</span>
                                     </label>
@@ -102,7 +102,7 @@ permalink: /contact/
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane me-2"></i>Envoyer le Message</button>
+                                <button type="submit" class="btn btn-primary btn-lg disabled"><i class="fas fa-paper-plane me-2" disabled></i>Envoyer le Message</button>
                             </div>
                         </div>
                     </form>
