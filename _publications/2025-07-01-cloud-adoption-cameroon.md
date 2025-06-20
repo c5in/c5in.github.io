@@ -5,8 +5,16 @@ authors: ["Dr. Jane Smith", "John Doe"]
 type: "White Paper" # White Paper, Case Study, Article, Report
 image: blog-img1.png
 excerpt: "An in-depth analysis of the current cloud computing landscape in Cameroon, identifying key drivers, barriers to adoption, and strategic recommendations for growth."
-# link: "https://link.to.external.pdf" # If hosted elsewhere
-file: "cloud-adoption-cameroon-c5in.pdf" # Optional: put in assets/files/ (create this folder)
+resources:
+ - name: DOI
+   icon: fas fa-link
+   link: ""
+ - name: PDF
+   icon: fas fa-file-pdf
+   link: ""
+ - name: Code (GitHub)
+   icon: fas fa-code
+   link: ""
 ---
 
 ## Abstract

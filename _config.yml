@@ -1,14 +1,45 @@
 title: C5IN # Cameroon Cloud & Computing Innovation Network
 email: contact@c5in.org # Change this
+first_name: C5IN
 description: >- # this means to ignore newlines until "baseurl:"
-  Fostering innovation in Cloud Computing, Distributed Systems, IoT Edge, and Fog technologies in Cameroon.
-  We aim to build a vibrant tech community through education, events, collaboration, and resource sharing.
+  Encourager la recherche dans les technologies du cloud computing, des systèmes distribués, de l'IoT Edge et du Fog au Cameroun. Notre objectif est de bâtir une communauté de chercheurs dynamique grâce à la formation, aux événements, à la collaboration et au partage de ressources.
 baseurl: "" # the subpath of your site, e.g. /blog. If hosted at https://username.github.io/reponame, set to /reponame
+keywords: "C5IN, Cameroun, Cloud Computing, Réseau d'innovation, IoT Edge, Fog Computing, Systèmes distribués, Communauté de recherche, Éducation, Événements, Collaboration"
 url: "https://c5in.github.io" # your site's domain, e.g., https://yourusername.github.io. Change this!
 github_username: c5in # Change this
 #linkedin_username: yourlinkedin # Optional
 
+
+# -----------------------------------------------------------------------------
+# Open Graph & Schema.org
+# -----------------------------------------------------------------------------
+# Display links to the page with a preview object on social media.
+# see https://schema.org/docs/faq.html for more information
+serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_schema_org: false # Include Schema.org in the HTML head
+og_image: # The site-wide (default for all links) Open Graph preview image
+
+# -----------------------------------------------------------------------------
+# Analytics and search engine verification
+# -----------------------------------------------------------------------------
+
+# For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
+# and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
+google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
+pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
+openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
+
+# For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
+google_site_verification: # your google-site-verification ID (Google Search Console)
+bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
+
+
+
 future: true
+awards:
+  enabled: false
+  max_awards: 5 # Maximum number of awards to display
 
 
 pagination:

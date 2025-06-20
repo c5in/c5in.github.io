@@ -1448,3 +1448,107 @@ thead th:hover {
 .legal-content ul {
     padding-left: 20px;
 }
+
+
+
+.page-hero-section { /* Un style de hero plus générique pour les pages internes */
+    background: linear-gradient(135deg, rgba(30, 80, 153, 0.85), rgba(52, 152, 219, 0.85)), url('https://placehold.co/1920x450/cccccc/999999?text=Recherche+C5IN') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+.page-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.section-separator {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+.publication-item {
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--primary-blue);
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-radius: 0 5px 5px 0;
+}
+.publication-item h5 { /* Titre de la publication */
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+.publication-authors {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+.publication-venue {
+    color: var(--primary-blue);
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.publication-links a {
+    margin-right: 15px;
+    font-size: 0.9rem;
+    color: var(--secondary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.publication-links a:hover {
+    color: var(--primary-blue);
+    text-decoration: underline;
+}
+.publication-links i {
+    margin-right: 5px;
+}
+
+.filter-buttons .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.filter-buttons .btn.active { /* Style pour le bouton de filtre actif (si JS est ajouté plus tard) */
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+.recognition-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.recognition-icon {
+    font-size: 3.5rem;
+    color: var(--accent-yellow); /* Couleur pour les icônes de reconnaissance */
+    margin-bottom: 20px;
+}
+.recognition-card h5 { /* Titre de la reconnaissance */
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.recognition-card p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+.recognition-card .recognition-year {
+    font-weight: bold;
+    color: var(--text-dark);
+}

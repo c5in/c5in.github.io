@@ -1,0 +1,55 @@
+---
+layout: default
+title: Publications
+description: "Explore white papers, case studies, research articles, and technical guides produced by C5IN and its members."
+collection_name: publications # This tells the layout which collection to iterate over
+permalink: /publications/
+---
+
+<!-- Hero Section pour "Publications & Reconnaissances" -->
+<section class="page-hero-section">
+    <div class="container">
+        <h1>Nos Contributions Scientifiques et Distinctions</h1>
+        <p class="lead">Découvrez l'impact de nos recherches et les reconnaissances obtenues par notre équipe.</p>
+    </div>
+</section>
+
+    <!-- Section Publications -->
+<section id="publications" class="py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title">Publications Scientifiques</h2>
+                <p class="lead">Une sélection de nos travaux publiés dans des revues et conférences de renom.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                {% for publication in site.publications %}
+                    <div class="publication-item">
+                        <h5>{{publication.title}}</h5>
+                        <p class="publication-authors">{{publication.authors | join: ", " }}</p>
+                        <p class="publication-venue">{{ publication.excerpt }}</p>
+                        <div class="publication-links">
+                            {% if publication.resources %}
+                            {% for resource in publication.resources %}
+                                <a href="{{ resource.link | relative_url }}" target="_blank" rel="noopener noreferrer">
+                                    <i class="{{resource.icon}}"></i> {{ resource.name }}
+                                </a>
+                            {% endfor %}
+                            {% endif %}
+
+                        </div>
+                    </div>
+                {% else %}
+                    <p>Aucune publication trouvée.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Reconnaissances -->
+ {% if site.awards.enabled %}
+   {% include partials/distinction.html %}
+{% endif %}
