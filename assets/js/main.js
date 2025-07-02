@@ -67,25 +67,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Active navigation highlighting based on current page URL
-    function highlightActiveNavLink() {
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        let currentPath = window.location.pathname.split('/').pop(); // Obtient le nom du fichier (e.g., "index.html")
+    // function highlightActiveNavLink() {
+    //     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    //     let currentPath = window.location.pathname.split('/').pop(); // Obtient le nom du fichier (e.g., "index.html")
 
-        // Si currentPath est vide (racine du site), on assume que c'est index.html
-        if (currentPath === '' || currentPath === '/') {
-            currentPath = 'index.html';
-        }
+    //     // Si currentPath est vide (racine du site), on assume que c'est index.html
+    //     if (currentPath === '' || currentPath === '/') {
+    //         currentPath = 'index.html';
+    //     }
 
-        navLinks.forEach(link => {
-            const linkPath = link.getAttribute('href').split('/').pop();
-            link.classList.remove('active'); // Enlève 'active' de tous les liens d'abord
-            if (linkPath === currentPath) {
-                link.classList.add('active');
-            }
-        });
-    }
+    //     navLinks.forEach(link => {
+    //         const linkPath = link.getAttribute('href').split('/').pop();
+    //         link.classList.remove('active'); // Enlève 'active' de tous les liens d'abord
+    //         if (linkPath === currentPath) {
+    //             link.classList.add('active');
+    //         }
+    //     });
+    // }
 
-    highlightActiveNavLink(); // Appeler la fonction au chargement de la page
+    // highlightActiveNavLink(); // Appeler la fonction au chargement de la page
 
 
 
